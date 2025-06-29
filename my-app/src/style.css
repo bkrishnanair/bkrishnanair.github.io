@@ -60,7 +60,7 @@ body {
 
 /* Main Hero Section Styles */
 .hero { 
-    background-image: url('E:\AA UMD COURSE REPO\personal\my-app\public\images\college.jpg'); 
+    background-image: url('../public/images/college.jpg'); 
     background-repeat: no-repeat; 
     background-size: cover; /* Ensures background scales proportionally */
     width: 100%; 

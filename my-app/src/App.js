@@ -68,7 +68,7 @@ function App() {
           </p>
         </div>
         <div className="about-image">
-          <img src="/images/me.jpg" alt="About Image" />
+          <img src="/images/me.jpg" alt="Balakrishna Nair" />
         </div>
       </section>
 
@@ -195,22 +195,22 @@ function App() {
             <div className="footer-menu">
               <ul className="footer-menu-list">
                 <li className="footer-list-items">
-                  <a className="footer-links" href="#">
+                  <a className="footer-links" href="https://www.facebook.com">
                     <i className="fab fa-facebook-f"></i>
                   </a>
                 </li>
                 <li className="footer-list-items">
-                  <a className="footer-links" href="#">
+                  <a className="footer-links" href="https://www.twitter.com">
                     <i className="fab fa-twitter"></i>
                   </a>
                 </li>
                 <li className="footer-list-items">
-                  <a className="footer-links" href="#">
+                  <a className="footer-links" href="https://www.instagram.com">
                     <i className="fab fa-instagram"></i>
                   </a>
                 </li>
                 <li className="footer-list-items">
-                  <a className="footer-links" href="#">
+                  <a className="footer-links" href="https://www.linkedin.com">
                     <i className="fab fa-linkedin-in"></i>
                   </a>
                 </li>
