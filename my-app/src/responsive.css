@@ -62,6 +62,12 @@
         padding: 1rem 0;
     }
 
+    .about .about-image img {
+        height: 400px; /* Or any other height you prefer */
+        object-fit: cover;
+        object-position: center; /* You can also use 'top', 'bottom', etc. */
+    }
+
     .services {
         padding: 2rem;
     }

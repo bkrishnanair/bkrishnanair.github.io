@@ -1,8 +1,45 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
+import emailjs from 'emailjs-com';
 import './style.css';
 import './responsive.css';
 
 function App() {
+  const [formData, setFormData] = useState({
+    from_name: '',
+    from_email: '',
+    from_phone: '',
+    message: '',
+  });
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.send(
+      'service_yht6pr7',
+      'template_eswzr2b',
+      formData,
+      'NRTtMARcpkkUM6hc4'
+    )
+      .then((result) => {
+        console.log(result.text);
+        alert('Message sent successfully!');
+      }, (error) => {
+        console.log(error.text);
+        alert('An error occurred, please try again.');
+      });
+
+    setFormData({
+      from_name: '',
+      from_email: '',
+      from_phone: '',
+      message: '',
+    });
+  };
+
   useEffect(() => {
     const hamburger = document.getElementById('hamburger');
     const menu = document.querySelector('.menu');
@@ -169,11 +206,11 @@ function App() {
         <div className="contact-content">
           <div className="contact-form-container">
             <h1 className="greet-heading">Get In Touch</h1>
-            <form className="contact-form">
-              <input className="form-controls" type="text" placeholder="Your Name" />
-              <input className="form-controls" type="text" placeholder="Your Email" />
-              <input className="form-controls" type="text" placeholder="Your Phone" />
-              <textarea className="form-controls" placeholder="Write your message" name="message" cols="30" rows="10"></textarea>
+            <form className="contact-form" onSubmit={sendEmail}>
+              <input className="form-controls" type="text" name="from_name" placeholder="Your Name" value={formData.from_name} onChange={handleChange} />
+              <input className="form-controls" type="email" name="from_email" placeholder="Your Email" value={formData.from_email} onChange={handleChange} />
+              <input className="form-controls" type="text" name="from_phone" placeholder="Your Phone" value={formData.from_phone} onChange={handleChange} />
+              <textarea className="form-controls" name="message" placeholder="Write your message" cols="30" rows="10" value={formData.message} onChange={handleChange}></textarea>
               <input className="form-btn btn common-btn" type="submit" value="Send Message" />
             </form>
           </div>
