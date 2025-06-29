@@ -1,7 +1,23 @@
+import React, { useEffect } from 'react';
 import './style.css';
 import './responsive.css';
 
 function App() {
+  useEffect(() => {
+    const hamburger = document.getElementById('hamburger');
+    const menu = document.querySelector('.menu');
+
+    const toggleMenu = () => {
+      menu.classList.toggle('active');
+    };
+
+    hamburger.addEventListener('click', toggleMenu);
+
+    return () => {
+      hamburger.removeEventListener('click', toggleMenu);
+    };
+  }, []);
+
   return (
     <>
       {/* Navbar header section */}
@@ -56,7 +72,7 @@ function App() {
         <div className="about-text">
           <h1 className="my-heading">About Me</h1>
           <p className="lead-para">
-            Hi, I'm Balakrishna Nair, a passionate software engineer and current Master's student in Software Engineering at the University of Maryland, College Park. With a solid foundation in backend development from my time at Capgemini and hands-on experience building scalable, user-centric applications, I thrive on creating innovative solutions to complex problems. 
+            Hi, I'm Balakrishna Nair, a passionate software engineer and current Master's student in Software Engineering at the University of Maryland, College Park. With a solid foundation in backend development from my time at Capgemini and hands-on experience building scalable, user-centric applications, I thrive on creating innovative solutions to complex problems.
           </p>
           <p>
             My expertise spans a range of technologies, including Python, Java, JavaScript, and SQL, complemented by experience in frameworks like Spring Boot and ReactJS. I'm deeply interested in leveraging AI and machine learning to enhance software functionality, as demonstrated by my recent projects integrating AI-driven features.
