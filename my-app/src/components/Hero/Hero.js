@@ -17,26 +17,27 @@ const Hero = () => {
     >
       <div className={styles.overlay}>
         <div className={styles.heroContent}>
-          <h3 className={styles.greetHeading}>Hello, I'm</h3>
           <h1 className={styles.myHeading}>Balakrishna Nair</h1>
           <TypeAnimation
-            sequence={['Full Stack Developer', 2000, 'Software Engineer', 2000, 'React Enthusiast', 2000]}
-            wrapper="h4"
+            sequence={['Software Engineer', 2000, "Master's Student @ UMD", 2000, 'Full-Stack Developer', 2000]}
+            wrapper="h2"
             className={styles.subHeading}
             repeat={Infinity}
           />
-          <p className={styles.bio}>A Software Engineer with 2 years of Experience.</p>
+          <p className={styles.bio}>
+            A Master&apos;s student at the University of Maryland with 2 years of enterprise experience in building scalable and intelligent software systems.
+          </p>
           <div className={styles.introButtons}>
-            {/* <button className={styles.btn + ' ' + styles.commonBtn}>Hire Me</button> */}
+            <a href="#contact" className={styles.btn + ' ' + styles.commonBtn}>Hire Me</a>
             <a
               href={process.env.PUBLIC_URL + '/Balakrishna Nair_Resume.pdf'}
               download
-              className={styles.btn + ' ' + styles.commonBtn}
+              className={styles.btn + ' ' + styles.ghostBtn}
             >
               Get Resume
             </a>
           </div>
-          <div className={styles.heroName}>M.Eng in Software Engineering @ University of Maryland, CollegePark</div>
+          <div className={styles.heroName}>M.Eng in Software Engineering @ University of Maryland, College Park</div>
         </div>
       </div>
     </section>

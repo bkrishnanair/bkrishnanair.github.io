@@ -1,0 +1,118 @@
+.modalBackdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.7);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modal {
+  background: #23263a;
+  color: #fff;
+  border-radius: 18px;
+  max-width: 540px;
+  width: 95vw;
+  padding: 2.5rem 2rem 2rem 2rem;
+  position: relative;
+  box-shadow: 0 8px 48px rgba(74,105,189,0.25);
+  z-index: 1001;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.closeBtn {
+  position: absolute;
+  top: 1.2rem;
+  right: 1.2rem;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.3rem;
+  cursor: pointer;
+  z-index: 1002;
+}
+.modalImage {
+  width: 100%;
+  max-width: 340px;
+  border-radius: 12px;
+  margin-bottom: 1.2rem;
+  object-fit: cover;
+  box-shadow: 0 2px 16px rgba(74,105,189,0.13);
+}
+.modalTitle {
+  font-size: 1.5rem;
+  font-family: var(--heading-font);
+  color: var(--primary);
+  margin-bottom: 0.7rem;
+  text-align: center;
+}
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.2rem;
+}
+.tagPill {
+  background: rgba(74,105,189,0.15);
+  color: var(--primary);
+  border-radius: 12px;
+  padding: 0.2rem 0.8rem;
+  font-size: 0.9rem;
+  font-family: var(--body-font);
+  font-weight: 500;
+  border: 1px solid var(--primary);
+}
+.section {
+  width: 100%;
+  margin-bottom: 1.1rem;
+}
+.section h3 {
+  margin: 0 0 0.3rem 0;
+  font-size: 1.1rem;
+  color: var(--primary);
+  font-family: var(--heading-font);
+}
+.section p {
+  margin: 0;
+  color: #fff;
+  font-size: 1rem;
+  font-family: var(--body-font);
+}
+.modalActions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.2rem;
+  width: 100%;
+  justify-content: center;
+}
+.actionBtn {
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  padding: 0.6rem 1.5rem;
+  font-size: 1rem;
+  font-family: var(--body-font);
+  font-weight: 500;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: background 0.2s, color 0.2s;
+}
+.actionBtn:hover {
+  background: #fff;
+  color: var(--primary);
+}
+@media (max-width: 600px) {
+  .modal {
+    padding: 1.2rem 0.5rem 1.2rem 0.5rem;
+  }
+  .modalImage {
+    max-width: 100%;
+  }
+} 

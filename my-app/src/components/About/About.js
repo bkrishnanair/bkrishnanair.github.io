@@ -23,16 +23,15 @@ const About = () => {
     >
       <div className={styles.aboutText}>
         <h1 className={styles.myHeading}>About Me</h1>
-        <p className={styles.leadPara}>
-          Hi, I'm Balakrishna Nair, a passionate software engineer and current Master's student in Software Engineering at the University of Maryland, College Park. With a solid foundation in backend development from my time at Capgemini and hands-on experience building scalable, user-centric applications, I thrive on creating innovative solutions to complex problems.
+        <p>
+          I am Balakrishna Nair Nalivalapil, a Master of Engineering student in Software Engineering at the University of Maryland, College Park, with an anticipated graduation date in May 2026. With two years of professional experience as a Senior Software Engineer at Capgemini, I specialize in middleware integration, automation pipelines, and scalable software systems.
         </p>
         <p>
-          My expertise spans a range of technologies, including Python, Java, JavaScript, and SQL, complemented by experience in frameworks like Spring Boot and ReactJS. I'm deeply interested in leveraging AI and machine learning to enhance software functionality, as demonstrated by my recent projects integrating AI-driven features.
+          Currently, I am deepening my expertise in React-based frontend development and Azure cloud platforms. I am passionate about building robust and user-friendly applications that solve real-world problems and continuously seek opportunities to enhance my skills in full stack development, data analytics, and IoT.
         </p>
+        <h2 className={styles.subheading}>My Philosophy</h2>
         <p>
-          Beyond coding, I enjoy collaborating in diverse teams, tackling challenges head-on, and continuously learning to stay at the forefront of technology. When I'm not working on projects, you'll find me exploring the latest in tech, engaging in sports, or listening to energizing music to fuel my creativity.
-          <br />
-          Let's connect and create something impactful!
+          I believe in building scalable and user-centric applications that make a meaningful impact.
         </p>
       </div>
       <div className={styles.aboutImage}>
