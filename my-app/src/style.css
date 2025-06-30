@@ -2,12 +2,37 @@
 /* Styles defined for the desktop or the bigger screen devices*/
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap'); 
 
-body { 
-    margin: 0; 
-    padding: 0; 
-    box-sizing: border-box; 
-    font-family: 'Poppins', sans-serif; 
-} 
+:root {
+  --background: #1a1a1a;
+  --primary: #4A69BD;
+  --heading-font: 'Lora', serif;
+  --body-font: 'Inter', sans-serif;
+}
+
+body {
+  background: var(--background);
+  color: #fff;
+  font-family: var(--body-font);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--heading-font);
+  color: #fff;
+  margin-top: 0;
+}
+
+a, .links, .footer-links {
+  color: var(--primary);
+  font-family: var(--body-font);
+  text-decoration: none;
+}
+
+section {
+  padding: 6rem 0;
+}
 
 /* Header Navbar Styles */
 .navbar { 
