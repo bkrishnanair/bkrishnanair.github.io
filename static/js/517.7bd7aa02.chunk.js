@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkmy_app=self.webpackChunkmy_app||[]).push([[517],{517:(a,e,t)=>{t.r(e),t.d(e,{default:()=>o});t(5043);const c="CallToAction_ctaSection__yB5x7",s="CallToAction_ctaHeading__zAMO2",n="CallToAction_ctaButton__kQhwk";var l=t(579);const o=()=>(0,l.jsxs)("section",{className:c,children:[(0,l.jsxs)("h2",{className:s,children:["Have a project in mind? ",(0,l.jsx)("br",{})," Let's build something great together."]}),(0,l.jsx)("a",{href:"#contact",className:n,children:"Get in Touch"})]})}}]);
+//# sourceMappingURL=517.7bd7aa02.chunk.js.map
