@@ -21,21 +21,30 @@ const About = () => {
       initial={{ opacity: 0, y: 60 }}
       animate={controls}
     >
-      <div className={styles.aboutText}>
-        <h1 className={styles.myHeading}>About Me</h1>
-        <p>
-          I am Balakrishna Nair Nalivalapil, a Master of Engineering student in Software Engineering at the University of Maryland, College Park, with an anticipated graduation date in May 2026. With two years of professional experience as a Senior Software Engineer at Capgemini, I specialize in middleware integration, automation pipelines, and scalable software systems.
-        </p>
-        <p>
-          Currently, I am deepening my expertise in React-based frontend development and Azure cloud platforms. I am passionate about building robust and user-friendly applications that solve real-world problems and continuously seek opportunities to enhance my skills in full stack development, data analytics, and IoT.
-        </p>
-        <h2 className={styles.subheading}>My Philosophy</h2>
-        <p>
-          I believe in building scalable and user-centric applications that make a meaningful impact.
-        </p>
-      </div>
-      <div className={styles.aboutImage}>
-        <img src={process.env.PUBLIC_URL + '/images/me.jpg'} alt="Balakrishna Nair" />
+      <div className={styles.aboutContainer}>
+        <motion.div
+          className={styles.aboutImage}
+          whileHover={{ scale: 1.07 }}
+          whileTap={{ scale: 1.03 }}
+        >
+          <div className={styles.imageOverlay}></div>
+          <picture>
+            <img src={process.env.PUBLIC_URL + '/images/me.jpg'} alt="Balakrishna Nair" loading="lazy" width="320" height="400" />
+          </picture>
+        </motion.div>
+        <div className={styles.aboutText}>
+          <h1 className={styles.myHeading}>About Me</h1>
+          <p>
+            I am Balakrishna Nair Nalivalapil, a Master of Engineering student in Software Engineering at the University of Maryland, College Park, with an anticipated graduation date in May 2026. With two years of professional experience as a Senior Software Engineer at Capgemini, I specialize in middleware integration, automation pipelines, and scalable software systems.
+          </p>
+          <p>
+            Currently, I am deepening my expertise in React-based frontend development and Azure cloud platforms. I am passionate about building robust and user-friendly applications that solve real-world problems and continuously seek opportunities to enhance my skills in full stack development, data analytics, and IoT.
+          </p>
+          <h2 className={styles.subheading}>My Philosophy</h2>
+          <p>
+            I believe in building scalable and user-centric applications that make a meaningful impact.
+          </p>
+        </div>
       </div>
     </motion.section>
   );

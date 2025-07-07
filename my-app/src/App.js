@@ -1,55 +1,47 @@
-import React from 'react';
+import React, { useState, useEffect, Suspense } from 'react';
 import Navbar from './components/Navbar/Navbar';
 import Hero from './components/Hero/Hero';
-import About from './components/About/About';
-import Experience from './components/Experience/Experience';
-import Skills from './components/Skills/Skills';
-import Portfolio from './components/Portfolio/Portfolio';
-import Contact from './components/Contact/Contact';
+import Preloader from './components/Preloader/Preloader';
+import { AnimatePresence } from 'framer-motion';
 import './style.css';
 import './responsive.css';
 
+const About = React.lazy(() => import('./components/About/About'));
+const Experience = React.lazy(() => import('./components/Experience/Experience'));
+const Skills = React.lazy(() => import('./components/Skills/Skills'));
+const Portfolio = React.lazy(() => import('./components/Portfolio/Portfolio'));
+const Contact = React.lazy(() => import('./components/Contact/Contact'));
+const CallToAction = React.lazy(() => import('./components/CallToAction/CallToAction'));
+const Footer = React.lazy(() => import('./components/Footer/Footer'));
+
 function App() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setLoading(false), 1700);
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <>
-      <Navbar />
-      <Hero />
-      <About />
-      <Experience />
-      <Skills />
-      <Portfolio />
-      <Contact />
-      {/* Footer section (to be modularized later) */}
-      <footer className="footer">
-        <div className="footer-content text-center">
-          <div className="social-links">
-            <div className="footer-menu">
-              <ul className="footer-menu-list">
-                <li className="footer-list-items">
-                  <a className="footer-links" href="https://www.facebook.com">
-                    <i className="fab fa-facebook-f"></i>
-                  </a>
-                </li>
-                <li className="footer-list-items">
-                  <a className="footer-links" href="https://www.twitter.com">
-                    <i className="fab fa-twitter"></i>
-                  </a>
-                </li>
-                <li className="footer-list-items">
-                  <a className="footer-links" href="https://www.instagram.com">
-                    <i className="fab fa-instagram"></i>
-                  </a>
-                </li>
-                <li className="footer-list-items">
-                  <a className="footer-links" href="https://www.linkedin.com">
-                    <i className="fab fa-linkedin-in"></i>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </footer>
+      <AnimatePresence>
+        {loading && <Preloader key="preloader" />}
+      </AnimatePresence>
+      {!loading && (
+        <>
+          <Navbar />
+          <Hero />
+          <Suspense fallback={<div />}>
+            <About />
+            <Experience />
+            <Skills />
+            <Portfolio />
+            <Contact />
+            <CallToAction />
+            <Footer />
+          </Suspense>
+        </>
+      )}
     </>
   );
 }

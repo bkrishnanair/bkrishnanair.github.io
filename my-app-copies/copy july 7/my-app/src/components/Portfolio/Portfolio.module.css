@@ -1,0 +1,31 @@
+.portfolio {
+  background: transparent;
+  color: var(--text);
+  padding: 7rem 0;
+}
+.portfolioHeading {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.myHeading {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: var(--primary);
+  font-family: var(--heading-font);
+}
+.projectsGrid {
+  display: flex;
+  flex-direction: row;
+  gap: 2.5rem;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 1.5rem;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+.projectsGrid::-webkit-scrollbar {
+  display: none;
+}
+.projectsGrid {
+  scrollbar-width: none;
+} 
