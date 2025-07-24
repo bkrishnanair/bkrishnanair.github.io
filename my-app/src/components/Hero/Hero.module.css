@@ -1,3 +1,147 @@
+# Balakrishna Nair – Modern Portfolio Website
+
+A modern, interactive, and professional portfolio website built with React.js, showcasing the skills, projects, and experience of Balakrishna Nair. This project demonstrates advanced frontend engineering, UI/UX design, and performance optimization best practices.
+
+---
+
+## 🚀 Features
+
+- **Modular React Architecture:** All major sections are implemented as reusable, maintainable components.
+- **Modern Animations:** Smooth fade-in, slide-up, and hover effects using [framer-motion](https://www.framer.com/motion/).
+- **Responsive Design:** Fully responsive layout for desktop, tablet, and mobile.
+- **Dark Theme:** Elegant, high-contrast dark mode with gold accent.
+- **Professional Typography:** Uses 'Playfair Display' for headings and 'Inter' for body text via Google Fonts.
+- **Portfolio as Case Studies:** Each project is presented as a detailed case study with modal overlays.
+- **Horizontal Scrolling Portfolio:** Engaging horizontal scroll for project cards.
+- **Skills Grid:** Visual grid of technical skills with icons.
+- **Experience Timeline:** Vertical timeline for professional experience.
+- **Contact Form:** Functional, validated contact form with social links.
+- **Preloader:** Animated preloader for a polished first impression.
+- **Performance Optimizations:** Code splitting, lazy loading, memoization, and image optimization.
+
+---
+
+## 🛠️ Tech Stack & Libraries
+
+- **React.js** (with Hooks, functional components)
+- **framer-motion** – Animations and transitions
+- **react-intersection-observer** – Scroll-triggered animations
+- **react-icons** – Scalable vector icons
+- **react-type-animation** – Typing effect in Hero section
+- **CSS Modules** – Scoped, maintainable styling
+- **Google Fonts** – 'Playfair Display' (headings), 'Inter' (body)
+- **source-map-explorer** – Bundle analysis (dev only)
+- **gh-pages** – Deployment to GitHub Pages
+
+---
+
+## 📁 Project Structure
+
+```
+my-app/
+├── public/
+│   ├── images/                # Static images (profile, background, project images)
+│   ├── Balakrishna Nair_Resume.pdf  # Downloadable resume
+│   ├── favicon.ico, manifest.json, ...
+│   └── index.html             # Main HTML template (Google Fonts linked here)
+├── src/
+│   ├── components/
+│   │   ├── Navbar/            # Top navigation bar
+│   │   ├── Hero/              # Hero/landing section with animated typing
+│   │   ├── About/             # About Me section
+│   │   ├── Experience/        # Professional experience timeline
+│   │   ├── Skills/            # Skills grid with icons
+│   │   ├── Portfolio/         # Portfolio section (ProjectCard, ProjectModal)
+│   │   ├── Contact/           # Contact form and social links
+│   │   ├── CallToAction/      # "Let's Connect" CTA section
+│   │   ├── Footer/            # Footer with copyright and links
+│   │   └── Preloader/         # Animated page preloader
+│   ├── App.js                 # Main app entry, imports all sections
+│   ├── style.css              # Global styles, CSS variables, theming
+│   ├── responsive.css         # Responsive adjustments
+│   ├── index.js, index.css    # React entry point and base styles
+│   └── ...                    # Test files, logo, etc.
+├── package.json               # Dependencies and scripts
+└── README.md                  # This file
+```
+
+---
+
+## 🧩 Component Overview
+
+- **Navbar:** Fixed top navigation with smooth scroll links.
+- **Hero:** Name, animated job title, short bio, background image, resume download, and "Hire Me" scroll button.
+- **About:** Bio, philosophy, and interactive profile image.
+- **Experience:** Vertical timeline of work history.
+- **Skills:** Grid of skills with icons (React, Python, AWS, etc.).
+- **Portfolio:**
+  - **ProjectCard:** Each project as a card with image, tags, and short description.
+  - **ProjectModal:** Modal overlay with detailed case study (problem, solution, impact, links).
+- **Contact:** Validated form and social icons (Email, LinkedIn, GitHub).
+- **CallToAction:** Prominent CTA before footer.
+- **Footer:** Minimalist footer with copyright and links.
+- **Preloader:** Animated initials shown on page load.
+
+---
+
+## 🎨 Styling & Theming
+
+- **Dark Theme:** `#121212` background, gold accent `#D4AF37`, off-white text `#EAEAEA`.
+- **Fonts:**
+  - Headings: 'Playfair Display', serif
+  - Body: 'Inter', sans-serif
+- **CSS Modules:** All components use local CSS modules for maintainability.
+- **Animations:** All major sections and cards use framer-motion for smooth, modern effects.
+
+---
+
+## 🌐 Deployment
+
+- **GitHub Pages:**
+  - Build: `npm run build`
+  - Deploy: `npm run deploy`
+  - The site is live at: [https://bkrishnanair.github.io](https://bkrishnanair.github.io)
+- **Preloader:** Ensures a smooth, professional first load.
+
+---
+
+## 🏗️ How to Run Locally
+
+1. **Install dependencies:**
+   ```bash
+   cd my-app
+   npm install
+   ```
+2. **Start the development server:**
+   ```bash
+   npm start
+   ```
+   The app will be available at [http://localhost:3000](http://localhost:3000).
+
+---
+
+## 🧪 Testing & Analysis
+
+- **Run tests:**
+  ```bash
+  npm test
+  ```
+- **Analyze bundle size:**
+  ```bash
+  npm run analyze
+  ```
+
+---
+
+## 🤝 Contributing
+
+Pull requests are welcome! For major changes, please open an issue first to discuss what you would like to change.
+
+---
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE) (if provided).
 .hero {
   min-height: 100vh;
   width: 100%;
@@ -42,26 +186,22 @@
   font-size: 1.3rem;
   color: #00d8ff;
   margin-bottom: 0.5rem;
-  text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
 }
 .myHeading {
   font-size: 2.8rem;
   font-weight: bold;
   margin-bottom: 0.5rem;
   color: #fff;
-  text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
 }
 .subHeading {
   font-size: 1.5rem;
   color: #fff;
   margin-bottom: 1rem;
-  text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
 }
 .bio {
   font-size: 1.1rem;
   margin-bottom: 1.5rem;
   color: #bdbdbd;
-  text-shadow: 1px 1px 6px rgba(0,0,0,0.5);
 }
 .introButtons {
   display: flex;
@@ -104,5 +244,43 @@
   color: #00d8ff;
   font-weight: 600;
   letter-spacing: 1px;
-  text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
-} 
+}
+
+.threeDContainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px; /* Adjust size as needed */
+  height: 300px; /* Adjust size as needed */
+  z-index: 0; /* Ensure it's behind the content but above the background image */
+  opacity: 0.4; /* Make it subtle */
+}
+
+@media (max-width: 768px) {
+  .myHeading {
+    font-size: 2rem;
+  }
+
+  .subHeading {
+    font-size: 1.2rem;
+  }
+
+  .bio {
+    font-size: 0.9rem;
+  }
+
+  .btn {
+    padding: 0.6rem 1.5rem;
+    font-size: 0.9rem;
+  }
+
+  .heroName {
+    font-size: 1rem;
+  }
+
+  .threeDContainer {
+    width: 200px; /* Smaller on mobile */
+    height: 200px; /* Smaller on mobile */
+  }
+}

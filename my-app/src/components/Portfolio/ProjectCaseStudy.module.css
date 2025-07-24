@@ -1,0 +1,127 @@
+.caseStudyContainer {
+  padding: 4rem 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.8rem;
+  color: var(--accent-color);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.mainImage {
+  width: 100%;
+  max-height: 450px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+.section {
+  margin-bottom: 2.5rem;
+}
+
+.section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  color: var(--accent-color);
+  margin-bottom: 1rem;
+  border-bottom: 2px solid var(--accent-color);
+  padding-bottom: 0.5rem;
+}
+
+.section p {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text-color);
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 3rem;
+  margin-bottom: 2.5rem;
+}
+
+.linkButton {
+  background-color: var(--accent-color);
+  color: #121212;
+  padding: 0.8rem 1.8rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-family: 'Inter', sans-serif;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.linkButton:hover {
+  background-color: #e0b84a; /* Slightly lighter gold */
+  transform: translateY(-3px);
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.8rem;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.tag {
+  background-color: rgba(212, 175, 55, 0.2); /* Light gold with transparency */
+  color: var(--accent-color);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.notFound {
+  text-align: center;
+  font-size: 1.5rem;
+  color: var(--text-color);
+  padding: 100px 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .caseStudyContainer {
+    padding: 2rem 1rem;
+  }
+
+  .title {
+    font-size: 2.2rem;
+  }
+
+  .section h2 {
+    font-size: 1.6rem;
+  }
+
+  .section p {
+    font-size: 1rem;
+  }
+
+  .links {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .linkButton {
+    width: 80%;
+    text-align: center;
+  }
+}

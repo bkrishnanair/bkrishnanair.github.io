@@ -1,7 +1,7 @@
 .footer {
   width: 100%;
   background: #181818;
-  padding: 2.5rem 0 1.5rem 0;
+  padding: 3rem 0 2rem 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -11,42 +11,81 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
+  max-width: 1100px;
+  padding: 0 1rem;
 }
 .name {
   font-family: 'Playfair Display', serif;
   color: #EAEAEA;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   font-weight: 700;
-  margin-bottom: 0.7rem;
+  margin-bottom: 1.5rem;
+}
+.contactInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+  width: 100%;
+}
+.emailLinks {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+.emailLink {
+  color: #EAEAEA;
+  text-decoration: none;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: color 0.3s ease;
+}
+.emailLink:hover {
+  color: #D4AF37;
 }
 .socialLinks {
   display: flex;
-  gap: 1.5rem;
-  margin-bottom: 0.7rem;
+  gap: 2rem;
 }
 .socialLinks a {
   color: #D4AF37;
-  font-size: 1.5rem;
-  transition: color 0.2s;
+  font-size: 1.8rem;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 .socialLinks a:hover {
   color: #fff;
+  transform: scale(1.1);
 }
 .copyright {
-  color: #EAEAEA;
-  font-size: 1rem;
+  color: #888;
+  font-size: 0.9rem;
   font-family: 'Inter', sans-serif;
-  margin-top: 0.5rem;
+  margin-top: 1.5rem;
   text-align: center;
+  border-top: 1px solid #333;
+  padding-top: 1.5rem;
+  width: 100%;
+}
+@media (max-width: 768px) {
+  .emailLinks {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
 }
 @media (max-width: 600px) {
   .footer {
-    padding: 1.2rem 0 1rem 0;
+    padding: 2rem 0 1.5rem 0;
   }
   .name {
-    font-size: 1rem;
+    font-size: 1.3rem;
   }
-  .copyright {
-    font-size: 0.9rem;
+  .socialLinks a {
+    font-size: 1.5rem;
   }
 } 
