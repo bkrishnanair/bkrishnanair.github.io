@@ -8,6 +8,7 @@ import Writings from './components/Writings/Writings'; // Import the new Writing
 import { AnimatePresence } from 'framer-motion';
 import './style.css';
 import './responsive.css';
+import HuddleShowcase from './components/HuddleShowcase/HuddleShowcase';
 
 const About = React.lazy(() => import('./components/About/About'));
 const Experience = React.lazy(() => import('./components/Experience/Experience'));
@@ -35,7 +36,7 @@ const projects = [
     tags: ['Python', 'Jenkins', 'CI/CD', 'DevOps', 'Agile'],
     shortDesc: 'Automated CI/CD pipeline for banking integration, reducing errors and deployment time.',
     problem: 'At Capgemini, the deployment process for mission-critical banking integration solutions was manual, time-consuming, and prone to human error, leading to delays and potential production issues.',
-    solution: 'I engineered and implemented a robust CI/CD pipeline from the ground up using Jenkins, Python scripting, and JFrog Artifactory. This pipeline automated the entire build, testing, and deployment workflow for IBM Integration Bus applications, integrating seamlessly with Jira and Bitbucket for full traceability.',
+    solution: 'I engineered and implemented a robust CI/CD pipeline from the ground up using Jenkins, Python scripting, and JFrog Artiefactory. This pipeline automated the entire build, testing, and deployment workflow for IBM Integration Bus applications, integrating seamlessly with Jira and Bitbucket for full traceability.',
     impact: 'The new automated pipeline cut deployment time by 30% and reduced post-deployment errors by 25%. This enhancement significantly increased team productivity and the reliability of systems handling over $100M in daily transactions.',
     liveUrl: null,
     githubUrl: null,
@@ -57,8 +58,8 @@ const projects = [
     tags: ['Python', 'Pandas', 'Matplotlib', 'Data Analysis'],
     shortDesc: 'Data analysis and visualization of open-source project health and contributor trends.',
     problem: "Large open-source projects like 'Poetry' struggle to understand contributor engagement trends and identify bottlenecks in issue resolution, which can slow down development and discourage new contributors.",
-    solution: 'I performed a comprehensive data analysis on the Poetry project's GitHub repository. Using Python, Pandas, and Matplotlib, I processed and visualized issue data to reveal patterns in contributor engagement and project responsiveness. I also developed unit tests to ensure the reliability of the data processing workflow.',
-    impact: 'My analysis provided actionable insights into the project's health, identifying key areas for improving community management and issue triage. The visualizations made complex data easily understandable for project maintainers.',
+    solution: "I performed a comprehensive data analysis on the Poetry project's GitHub repository. Using Python, Pandas, and Matplotlib, I processed and visualized issue data to reveal patterns in contributor engagement and project responsiveness. I also developed unit tests to ensure the reliability of the data processing workflow.",
+    impact: "My analysis provided actionable insights into the project's health, identifying key areas for improving community management and issue triage. The visualizations made complex data easily understandable for project maintainers.",
     liveUrl: null,
     githubUrl: 'https://github.com/bkrishnanair/poetry-issues-analysis',
   },
@@ -99,6 +100,7 @@ function App() {
                   <About />
                   <Experience />
                   <Skills />
+                  <HuddleShowcase />
                   <Portfolio projects={projects} />
                   <Writings /> {/* Add the Writings component here */}
                   <Contact />
