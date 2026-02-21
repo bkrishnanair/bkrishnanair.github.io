@@ -35,10 +35,10 @@ const About = () => {
         <div className={styles.aboutText}>
           <h1 className={styles.myHeading}>About Me</h1>
           <p>
-            I am Balakrishna Nair Nalivalapil, a Master of Engineering student in Software Engineering at the University of Maryland, College Park, with an anticipated graduation date in May 2026. With two years of professional experience as a Senior Software Engineer at Capgemini, I specialize in middleware integration, automation pipelines, and scalable software systems.
+            I am a Master of Engineering student in Software Engineering at the University of Maryland (Expected May 2026). With two years of enterprise experience as a Senior Software Engineer at Capgemini, I specialize in building reliable, highly scalable architectures and automating CI/CD pipelines.
           </p>
           <p>
-            Currently, I am deepening my expertise in React-based frontend development and Azure cloud platforms. I am passionate about building robust and user-friendly applications that solve real-world problems and continuously seek opportunities to enhance my skills in full stack development, data analytics, and IoT.
+            Currently, I am focused on bridging the gap between enterprise rigor and modern product development. I am passionate about engineering full-stack applications using Next.js, TypeScript, and AWS, and integrating emerging technologies like Generative AI (Gemini/Llama3) to solve real-world problems. I am a tenacious debugger, a fast learner, and an engineer who loves taking ownership of a product from the database to the deployment pipeline.
           </p>
           <h2 className={styles.subheading}>My Philosophy</h2>
           <p>

@@ -1,24 +1,21 @@
 import React from 'react';
-import styles from './Portfolio.module.css';
 import ProjectCard from './ProjectCard';
 import { motion } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
 
 const Portfolio = ({ projects }) => {
-  const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.12 });
-
   return (
-    <section id="portfolio" className={styles.portfolio}>
-      <div className={styles.portfolioHeading}>
-        <h1 className={styles.myHeading}>Portfolio</h1>
+    <section id="portfolio" className="py-32 px-4 md:px-8 max-w-7xl mx-auto">
+      <div className="mb-16">
+        <motion.h1
+          className="text-4xl md:text-5xl font-outfit font-bold text-offwhite text-center"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+        >
+          Portfolio
+        </motion.h1>
       </div>
-      <motion.div
-        className={styles.projectsGrid}
-        ref={ref}
-        initial={{ opacity: 0, y: 60 }}
-        animate={inView ? { opacity: 1, y: 0 } : {}}
-        transition={{ duration: 0.7, ease: 'easeOut' }}
-      >
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {projects.map((project, idx) => (
           <ProjectCard
             key={idx}
@@ -26,7 +23,7 @@ const Portfolio = ({ projects }) => {
             index={idx}
           />
         ))}
-      </motion.div>
+      </div>
     </section>
   );
 };

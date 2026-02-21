@@ -1,5 +1,4 @@
 import React from 'react';
-import styles from './HuddleShowcase.module.css';
 import { motion } from 'framer-motion';
 import { FaGithub } from 'react-icons/fa';
 import { FiExternalLink } from 'react-icons/fi';
@@ -10,24 +9,31 @@ import userProfile from './huddleshow/profile.jpg';
 
 const HuddleShowcase = () => {
   return (
-    <section id="huddle" className={styles.huddleShowcase}>
-      <div className={styles.huddleContent}>
-        <div className={styles.leftColumn}>
+    <section id="huddle" className="py-32 px-4 md:px-8 max-w-7xl mx-auto">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+        {/* Left Column - Content */}
+        <div className="flex flex-col">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className={styles.projectTitle}>Huddle: Discover. Create. Connect.</h1>
-            <div className={styles.links}>
-              <a href="https://huddlev1.vercel.app/" target="_blank" rel="noopener noreferrer" className={styles.linkButton}>
+            <h1 className="text-4xl md:text-5xl font-outfit font-bold text-offwhite mb-6 leading-tight">
+              Huddle: Discover. Create. Connect.
+            </h1>
+
+            <div className="flex flex-wrap gap-4 mb-10">
+              <a href="https://huddlev1.vercel.app/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3 bg-cyan text-slate font-bold font-jakarta rounded-full hover:bg-offwhite hover:text-cyan transition-colors shadow-[0_0_15px_rgba(45,212,191,0.3)]">
                 Live Demo <FiExternalLink />
               </a>
-              <a href="https://github.com/bkrishnanair/huddle_v0" target="_blank" rel="noopener noreferrer" className={styles.linkButton}>
+              <a href="https://github.com/bkrishnanair/huddle_v0" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3 bg-transparent border-2 border-cyan text-cyan font-bold font-jakarta rounded-full hover:bg-cyan hover:text-slate transition-colors">
                 Source Code <FaGithub />
               </a>
             </div>
-            <div className={styles.narrative}>
+
+            <div className="bg-slate/30 backdrop-blur-xl border border-white/5 rounded-3xl p-6 md:p-8 mb-8 text-offwhite/80 font-jakarta leading-relaxed space-y-4">
               <p>
                 Huddle began with a personal frustration: the chaos of organizing pickup cricket games at UMD. This initial MVP, built to solve my own problem, quickly evolved. Guided by invaluable feedback from mentors at the Dingman Center's Hatchery program, I undertook a strategic pivot. I refactored the entire application, transforming it from a niche sports app into a scalable, "operating system for local communities."
               </p>
@@ -35,48 +41,72 @@ const HuddleShowcase = () => {
                 This journey showcases not only my technical ability to re-architect a live, full-stack application but also my adaptability and product vision as a founder. The core challenge was to generalize the entire user experience—from the Firestore data model and API routes to the UI components and marketing copy—while preserving the app's stability and signature "glassmorphism" aesthetic.
               </p>
             </div>
-            <div className={styles.features}>
-              <h2>Key Features</h2>
-              <ul>
-                <li><strong>Scalable Serverless Backend:</strong> Built on a modern, serverless architecture using Next.js 15 API Routes and Firebase for security and performance at scale.</li>
-                <li><strong>Dynamic, Real-Time Map View:</strong> Utilizes the Google Maps Platform with custom, cloud-based styling to serve as the central hub for discovering local events in real-time.</li>
-                <li><strong>AI-Assisted Event Creation:</strong> Features an intuitive, multi-step modal that integrates the Google Gemini API to help organizers generate catchy, context-aware titles and descriptions.</li>
-                <li><strong>Secure Authentication & Community Tools:</strong> A complete authentication system with user profiles, a trust-building "check-in" system, and event-specific real-time chat.</li>
+
+            <div className="mb-10">
+              <h2 className="text-2xl font-outfit font-bold text-gold mb-6">Key Features</h2>
+              <ul className="space-y-4">
+                {[
+                  { title: 'Scalable Serverless Backend', desc: 'Built on a modern, serverless architecture using Next.js 15 API Routes and Firebase for security and performance at scale.' },
+                  { title: 'Dynamic, Real-Time Map View', desc: 'Utilizes the Google Maps Platform with custom, cloud-based styling to serve as the central hub for discovering local events in real-time.' },
+                  { title: 'AI-Assisted Event Creation', desc: 'Features an intuitive, multi-step modal that integrates the Google Gemini API to help organizers generate catchy, context-aware titles and descriptions.' },
+                  { title: 'Secure Authentication & Community Tools', desc: 'A complete authentication system with user profiles, a trust-building "check-in" system, and event-specific real-time chat.' }
+                ].map((feature, idx) => (
+                  <li key={idx} className="flex items-start gap-3">
+                    <span className="text-cyan mt-1 opacity-80">▹</span>
+                    <span className="font-jakarta text-offwhite/80 leading-relaxed">
+                      <strong className="text-offwhite font-semibold">{feature.title}: </strong>{feature.desc}
+                    </span>
+                  </li>
+                ))}
               </ul>
             </div>
-            <div className={styles.techStack}>
-              <h2>Tech Stack</h2>
-              <div className={styles.techIcons}>
-                <span>Next.js</span>
-                <span>React</span>
-                <span>TypeScript</span>
-                <span>Tailwind CSS</span>
-                <span>Framer Motion</span>
-                <span>Firebase</span>
-                <span>Firestore</span>
-                <span>Google Maps API</span>
-                <span>Gemini API</span>
-                <span>Vercel</span>
+
+            <div>
+              <h2 className="text-2xl font-outfit font-bold text-gold mb-6">Tech Stack</h2>
+              <div className="flex flex-wrap gap-3">
+                {['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'Firebase', 'Firestore', 'Google Maps API', 'Gemini API', 'Vercel'].map((tech, idx) => (
+                  <motion.span
+                    key={idx}
+                    className="px-4 py-2 bg-white/5 border border-white/10 text-cyan text-sm font-jakarta font-medium rounded-full cursor-default"
+                    whileHover={{ y: -4, transition: { type: 'spring', stiffness: 300, damping: 20 } }}
+                  >
+                    {tech}
+                  </motion.span>
+                ))}
               </div>
             </div>
           </motion.div>
         </div>
-        <div className={styles.rightColumn}>
+
+        {/* Right Column - Media */}
+        <div className="flex flex-col gap-6">
           <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8, delay: 0.2 }}
+            className="w-full rounded-[2rem] overflow-hidden border border-white/10 shadow-[0_0_30px_rgba(0,0,0,0.5)] bg-black"
           >
-            <div className={styles.heroAsset}>
-              <video src={heroVideo} autoPlay loop muted playsInline />
-            </div>
-            <div className={styles.gallery}>
-              <img src={landingPage} alt="Huddle Landing Page" />
-              <img src={createEvent} alt="Huddle Create Event Modal" />
-              <img src={userProfile} alt="Huddle User Profile" />
-            </div>
+            <video src={heroVideo} autoPlay loop muted playsInline className="w-full h-auto object-cover" />
           </motion.div>
+
+          <div className="grid grid-cols-3 gap-4">
+            {[landingPage, createEvent, userProfile].map((img, idx) => (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.4 + (idx * 0.1) }}
+                className="rounded-2xl overflow-hidden border border-white/5 cursor-pointer"
+                whileHover={{ scale: 1.05 }}
+              >
+                <img src={img} alt={`Huddle Screenshot ${idx + 1}`} className="w-full h-full object-cover" />
+              </motion.div>
+            ))}
+          </div>
         </div>
+
       </div>
     </section>
   );

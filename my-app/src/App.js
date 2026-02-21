@@ -22,25 +22,15 @@ const projects = [
   {
     title: 'ClassNest - AI-Powered Learning Management System',
     image: 'https://images.unsplash.com/photo-1513258496099-48168024aec0?auto=format&fit=crop&w=600&q=80',
-    tags: ['Django', 'React', 'PostgreSQL', 'AI/ML', 'Groq API'],
-    shortDesc: 'AI-driven LMS with automatic quiz generation from PDFs and role-based access.',
+    tags: ['Next.js', 'React', 'Groq API', 'LLMs', 'Prompt Engineering'],
+    shortDesc: 'AI-driven LMS with 90% test coverage and automatic quiz generation from PDFs via Llama3.',
     problem: 'Educators often spend significant manual effort creating engaging and relevant learning materials. The challenge was to design a system that could automate content creation and provide a scalable, multi-user learning environment.',
     solution: 'I led the development of a full-featured LMS using a Django MVT backend and a React frontend. The core innovation was an AI-driven quiz generation module using the Groq API and Llama3 LLM, which automatically converts uploaded PDF documents into interactive quizzes. The system also features secure, role-based access control for administrators, educators, and students.',
     impact: 'This system significantly enhances educator efficiency by automating content creation. The AI-powered features provide a more dynamic and adaptive learning experience for students, directly addressing the need for modern, intelligent educational tools.',
     liveUrl: 'https://classnest.up.railway.app/',
     githubUrl: 'https://github.com/bkrishnanair/classnest',
   },
-  {
-    title: 'Enterprise CI/CD Automation Pipeline',
-    image: 'https://images.unsplash.com/photo-1461749280684-dccba-e2f6?auto=format&fit=crop&w=600&q=80',
-    tags: ['Python', 'Jenkins', 'CI/CD', 'DevOps', 'Agile'],
-    shortDesc: 'Automated CI/CD pipeline for banking integration, reducing errors and deployment time.',
-    problem: 'At Capgemini, the deployment process for mission-critical banking integration solutions was manual, time-consuming, and prone to human error, leading to delays and potential production issues.',
-    solution: 'I engineered and implemented a robust CI/CD pipeline from the ground up using Jenkins, Python scripting, and JFrog Artiefactory. This pipeline automated the entire build, testing, and deployment workflow for IBM Integration Bus applications, integrating seamlessly with Jira and Bitbucket for full traceability.',
-    impact: 'The new automated pipeline cut deployment time by 30% and reduced post-deployment errors by 25%. This enhancement significantly increased team productivity and the reliability of systems handling over $100M in daily transactions.',
-    liveUrl: null,
-    githubUrl: null,
-  },
+
   {
     title: 'IoT Smart Health Monitoring System',
     image: 'https://images.unsplash.com/photo-1516574187841-cb9cc2ca948b?auto=format&fit=crop&w=600&q=80',
