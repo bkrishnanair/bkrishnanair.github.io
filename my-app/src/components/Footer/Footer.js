@@ -22,7 +22,7 @@ const Footer = () => {
           <a href="https://github.com/bkrishnanair" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="w-12 h-12 flex items-center justify-center bg-white/5 hover:bg-cyan hover:text-slate border border-white/10 rounded-full transition-all text-offwhite">
             <FaGithub size={20} />
           </a>
-          <a href={process.env.PUBLIC_URL + '/Balakrishna Nair_Resume.pdf'} download="Balakrishna_Nair_Resume.pdf" title="Download Resume" className="w-12 h-12 flex items-center justify-center bg-white/5 hover:bg-cyan hover:text-slate border border-white/10 rounded-full transition-all text-offwhite">
+          <a href="https://drive.google.com/drive/folders/1VoKsNrn7fdTpcnJuDrtM8dOyr-5OiZPJ?usp=drive_link" target="_blank" rel="noopener noreferrer" title="View Resume Folder" className="w-12 h-12 flex items-center justify-center bg-white/5 hover:bg-cyan hover:text-slate border border-white/10 rounded-full transition-all text-offwhite">
             <FaFileDownload size={20} />
           </a>
         </div>

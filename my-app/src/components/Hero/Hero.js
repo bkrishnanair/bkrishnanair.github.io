@@ -84,13 +84,12 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.9 }}
         >
-          <a
-            href={process.env.PUBLIC_URL + '/Balakrishna Nair_Resume.pdf'}
-            download="Balakrishna_Nair_Resume.pdf"
-            className="px-6 py-3 rounded-full bg-cyan text-slate font-bold font-jakarta text-lg transition-all hover:bg-offwhite hover:text-cyan shadow-[0_0_20px_rgba(45,212,191,0.5)] hover:shadow-[0_0_30px_rgba(45,212,191,0.8)] inline-block"
+          <MagneticButton
+            className="px-6 py-3 rounded-full bg-cyan text-slate font-bold font-jakarta text-lg transition-all hover:bg-offwhite hover:text-cyan shadow-[0_0_20px_rgba(45,212,191,0.5)] hover:shadow-[0_0_30px_rgba(45,212,191,0.8)]"
+            onClick={() => window.open('https://drive.google.com/drive/folders/1VoKsNrn7fdTpcnJuDrtM8dOyr-5OiZPJ?usp=drive_link', '_blank')}
           >
-            Download Resume (PDF)
-          </a>
+            Get Resume
+          </MagneticButton>
 
           <MagneticButton
             className="px-6 py-3 rounded-full bg-transparent border border-cyan text-cyan font-bold font-jakarta text-lg transition-colors hover:bg-cyan hover:text-slate"
