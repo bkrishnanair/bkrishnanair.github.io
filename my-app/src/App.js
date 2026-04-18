@@ -4,7 +4,7 @@ import Navbar from './components/Navbar/Navbar';
 import Hero from './components/Hero/Hero';
 import Preloader from './components/Preloader/Preloader';
 import ProjectCaseStudy from './components/Portfolio/ProjectCaseStudy';
-import Writings from './components/Writings/Writings'; // Import the new Writings component
+import Stats from './components/Stats/Stats';
 import { AnimatePresence } from 'framer-motion';
 import './style.css';
 import './responsive.css';
@@ -12,6 +12,7 @@ import HuddleShowcase from './components/HuddleShowcase/HuddleShowcase';
 
 const About = React.lazy(() => import('./components/About/About'));
 const Experience = React.lazy(() => import('./components/Experience/Experience'));
+const Certifications = React.lazy(() => import('./components/Certifications/Certifications'));
 const Skills = React.lazy(() => import('./components/Skills/Skills'));
 const Portfolio = React.lazy(() => import('./components/Portfolio/Portfolio'));
 const Contact = React.lazy(() => import('./components/Contact/Contact'));
@@ -19,6 +20,18 @@ const CallToAction = React.lazy(() => import('./components/CallToAction/CallToAc
 const Footer = React.lazy(() => import('./components/Footer/Footer'));
 
 const projects = [
+  {
+    title: 'Huddle - Community Operating System',
+    image: 'https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&w=600&q=80',
+    tags: ['React Native', 'Node.js', 'Firebase', 'Google Maps API'],
+    shortDesc: 'Hyperlocal platform designed to be the operating system for local communities, 500+ events tracked.',
+    problem: 'Huddle began with a problem I lived every day at UMD — the chaos of discovering and organizing local campus events.',
+    solution: 'What started as a small MVP evolved, through mentorship from the Dingman Center Hatchery program, into a scalable hyperlocal platform. We utilized React Native and Firebase to create real-time discoverability.',
+    impact: 'Grew to successfully track 500+ events, acting as the centralized hub for community engagement on campus.',
+    liveUrl: '#huddle',
+    githubUrl: null,
+    isFeatured: true,
+  },
   {
     title: 'ClassNest - AI-Powered Learning Management System',
     image: 'https://images.unsplash.com/photo-1513258496099-48168024aec0?auto=format&fit=crop&w=600&q=80',
@@ -89,10 +102,11 @@ function App() {
                   <Hero />
                   <About />
                   <Experience />
+                  <Stats />
+                  <Certifications />
                   <Skills />
                   <HuddleShowcase />
                   <Portfolio projects={projects} />
-                  <Writings /> {/* Add the Writings component here */}
                   <Contact />
                   <CallToAction />
                   <Footer />

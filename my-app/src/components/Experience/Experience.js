@@ -7,18 +7,10 @@ const experiences = [
     company: 'Capgemini',
     dates: 'Oct 2022 – Sep 2024',
     bullets: [
+      'Promoted to Senior Software Engineer within 18 months.',
       'Designed and deployed 20+ integration solutions for MUFG Bank using IBM Integration Bus, securely processing high-volume transactions exceeding $100M daily.',
       'Enhanced system observability and logging strategies, achieving a 25% reduction in post-deployment errors.',
       'Architected CI/CD pipelines using Jenkins and Python, which accelerated release cycles and reduced feature integration time by 30%.'
-    ]
-  },
-  {
-    role: 'Technology Shop Assistant',
-    company: 'The Clarice Smith Performing Arts Center, UMD',
-    dates: 'Aug 2024 – Present',
-    bullets: [
-      'Provide technical support for live events, including sound and lighting system setup and troubleshooting.',
-      'Assist diverse patrons and manage equipment inventory with a customer-focused approach.'
     ]
   }
 ];

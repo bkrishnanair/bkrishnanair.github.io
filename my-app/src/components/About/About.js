@@ -35,14 +35,13 @@ const About = () => {
         <div className={styles.aboutText}>
           <h1 className={styles.myHeading}>About Me</h1>
           <p>
-            I am a Master of Engineering student in Software Engineering at the University of Maryland (Expected May 2026). With two years of enterprise experience as a Senior Software Engineer at Capgemini, I specialize in building reliable, highly scalable architectures and automating CI/CD pipelines.
+            I'm a Software Engineer completing my Master's in Software Engineering at the University of Maryland (graduating May 2026). I bring 2 years of prior enterprise experience from Capgemini Technology Services, where I architected high-volume banking integration systems processing daily transactions for MUFG Bank.
           </p>
           <p>
-            Currently, I am focused on bridging the gap between enterprise rigor and modern product development. I am passionate about engineering full-stack applications using Next.js, TypeScript, and AWS, and integrating emerging technologies like Generative AI (Gemini/Llama3) to solve real-world problems. I am a tenacious debugger, a fast learner, and an engineer who loves taking ownership of a product from the database to the deployment pipeline.
+            My engineering philosophy sits at the intersection of enterprise rigor and modern product velocity. I specialize in building reliable, scalable full-stack applications using Next.js, TypeScript, and cloud platforms (AWS, GCP, Firebase), while integrating emerging technologies like Generative AI (Gemini, Llama3) to solve real-world problems.
           </p>
-          <h2 className={styles.subheading}>My Philosophy</h2>
           <p>
-            I believe in building scalable and user-centric applications that make a meaningful impact.
+            I'm a tenacious debugger, a fast learner, and an engineer who takes ownership from the database schema to the deployment pipeline. Currently open to full-time Software Engineering roles starting June 2026.
           </p>
         </div>
       </div>

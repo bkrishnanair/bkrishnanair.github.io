@@ -60,10 +60,10 @@ const Navbar = () => {
         </div>
 
         <div className="hidden md:flex items-center gap-8">
-          {['Home', 'Portfolio', 'About', 'Services', 'Contact Me'].map((item) => (
+          {['Home', 'About', 'Experience', 'Projects', 'Certifications', 'Contact'].map((item) => (
             <a
               key={item}
-              href={item === 'Contact Me' ? '#contact' : `#${item.toLowerCase().replace(' ', '')}`}
+              href={`#${item.toLowerCase()}`}
               className="text-offwhite font-medium hover:text-cyan transition-colors text-sm uppercase tracking-wider"
             >
               {item}
@@ -86,10 +86,10 @@ const Navbar = () => {
           exit={{ opacity: 0, y: -20 }}
           className="absolute top-24 left-4 right-4 bg-slate border border-white/10 rounded-2xl p-6 shadow-2xl flex flex-col gap-6 md:hidden backdrop-blur-xl bg-opacity-95"
         >
-          {['Home', 'Portfolio', 'About', 'Services', 'Contact Me'].map((item) => (
+          {['Home', 'About', 'Experience', 'Projects', 'Certifications', 'Contact'].map((item) => (
             <a
               key={item}
-              href={item === 'Contact Me' ? '#contact' : `#${item.toLowerCase().replace(' ', '')}`}
+              href={`#${item.toLowerCase()}`}
               onClick={() => setIsOpen(false)}
               className="text-offwhite font-medium hover:text-cyan transition-colors text-lg"
             >

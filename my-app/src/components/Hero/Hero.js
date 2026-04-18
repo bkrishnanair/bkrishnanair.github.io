@@ -1,5 +1,4 @@
 import React, { useRef } from 'react';
-import { TypeAnimation } from 'react-type-animation';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import ThreeDObject from './ThreeDObject';
 import MagneticButton from '../common/MagneticButton';
@@ -42,56 +41,81 @@ const Hero = () => {
           Balakrishna Nair
         </motion.h1>
 
-        <motion.div
-          className="text-2xl md:text-4xl font-outfit font-bold text-gold mb-8 h-12"
+        <motion.h2
+          className="text-2xl md:text-3xl font-outfit font-bold text-gold mb-2"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
-          <TypeAnimation
-            sequence={['Software Engineer', 2000, 'Full-Stack Developer', 2000]}
-            wrapper="span"
-            repeat={Infinity}
-          />
-        </motion.div>
+          Software Engineer
+        </motion.h2>
 
         <motion.p
-          className="text-lg md:text-xl font-jakarta text-offwhite/80 max-w-2xl mb-10 leading-relaxed"
+          className="text-lg md:text-xl font-jakarta text-offwhite/80 max-w-2xl mt-4 mb-2 leading-relaxed"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.6 }}
         >
-          A Master's student at the University of Maryland with 2 years of enterprise experience in building scalable and intelligent software systems.
+          Master's in Software Engineering at University of Maryland &mdash; graduating May 2026.
+        </motion.p>
+
+        <motion.p
+          className="text-md md:text-lg font-jakarta text-offwhite/70 max-w-2xl mb-8 leading-relaxed italic"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.8, delay: 0.7 }}
+        >
+          Building reliable, scalable full-stack systems. 2+ years enterprise experience.
         </motion.p>
 
         <motion.div
-          className="flex flex-wrap items-center justify-center gap-6 mb-12"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate/50 border border-green-500/30 text-green-400 font-jakarta text-sm font-semibold mb-10"
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.8 }}
         >
-          <MagneticButton
-            className="px-8 py-3 rounded-full bg-cyan text-slate font-bold font-jakarta text-lg transition-all hover:bg-offwhite hover:text-cyan shadow-[0_0_20px_rgba(45,212,191,0.5)] hover:shadow-[0_0_30px_rgba(45,212,191,0.8)]"
-            onClick={() => window.open('https://www.linkedin.com/in/bkrishnanair', '_blank')}
+          <div className="w-2.5 h-2.5 rounded-full bg-green-500 animate-pulse"></div>
+          Available for full-time roles starting June 15, 2026
+        </motion.div>
+
+        <motion.div
+          className="flex flex-wrap items-center justify-center gap-4 mb-4"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.9 }}
+        >
+          <a
+            href={process.env.PUBLIC_URL + '/Balakrishna Nair_Resume.pdf'}
+            download="Balakrishna_Nair_Resume.pdf"
+            className="px-6 py-3 rounded-full bg-cyan text-slate font-bold font-jakarta text-lg transition-all hover:bg-offwhite hover:text-cyan shadow-[0_0_20px_rgba(45,212,191,0.5)] hover:shadow-[0_0_30px_rgba(45,212,191,0.8)] inline-block"
           >
-            LinkedIn
+            Download Resume (PDF)
+          </a>
+
+          <MagneticButton
+            className="px-6 py-3 rounded-full bg-transparent border border-cyan text-cyan font-bold font-jakarta text-lg transition-colors hover:bg-cyan hover:text-slate"
+            onClick={() => { document.getElementById('portfolio')?.scrollIntoView({ behavior: 'smooth' }); }}
+          >
+            View Projects
           </MagneticButton>
 
           <MagneticButton
-            className="px-8 py-3 rounded-full bg-transparent border-2 border-cyan text-cyan font-bold font-jakarta text-lg transition-colors hover:bg-cyan hover:text-slate"
-            onClick={() => window.open('https://drive.google.com/drive/folders/1VoKsNrn7fdTpcnJuDrtM8dOyr-5OiZPJ?usp=drive_link', '_blank')}
+            className="px-6 py-3 rounded-full bg-transparent border border-white/20 text-offwhite font-bold font-jakarta text-lg transition-colors hover:bg-white/10"
+            onClick={() => { document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }); }}
           >
-            Get Resume
+            Get in Touch
           </MagneticButton>
         </motion.div>
 
         <motion.div
-          className="text-sm md:text-base font-jakarta font-semibold text-cyan/90 tracking-widest uppercase"
+          className="flex gap-6 mt-6 justify-center"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 1 }}
+          transition={{ duration: 1, delay: 1.1 }}
         >
-          M.Eng in Software Engineering @ University of Maryland, College Park
+          <a href="https://www.linkedin.com/in/bkrishnanair" target="_blank" rel="noreferrer" className="text-cyan/80 hover:text-cyan transition-colors underline font-jakarta text-sm uppercase tracking-wider">LinkedIn</a>
+          <a href="https://github.com/bkrishnanair" target="_blank" rel="noreferrer" className="text-cyan/80 hover:text-cyan transition-colors underline font-jakarta text-sm uppercase tracking-wider">GitHub</a>
+          <a href="mailto:bkrishna@umd.edu" className="text-cyan/80 hover:text-cyan transition-colors underline font-jakarta text-sm uppercase tracking-wider">Email</a>
         </motion.div>
       </motion.div>
 

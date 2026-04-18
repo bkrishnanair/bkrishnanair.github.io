@@ -35,10 +35,10 @@ const HuddleShowcase = () => {
 
             <div className="bg-slate/30 backdrop-blur-xl border border-white/5 rounded-3xl p-6 md:p-8 mb-8 text-offwhite/80 font-jakarta leading-relaxed space-y-4">
               <p>
-                Huddle began with a personal frustration: the chaos of organizing pickup cricket games at UMD. This initial MVP, built to solve my own problem, quickly evolved. Guided by invaluable feedback from mentors at the Dingman Center's Hatchery program, I undertook a strategic pivot. I refactored the entire application, transforming it from a niche sports app into a scalable, "operating system for local communities."
+                Huddle began with a problem I lived every day at UMD — the chaos of discovering and organizing local campus events. What started as a small MVP evolved, through mentorship from the Dingman Center Hatchery program, into a scalable hyperlocal platform designed to be the "operating system for local communities."
               </p>
               <p>
-                This journey showcases not only my technical ability to re-architect a live, full-stack application but also my adaptability and product vision as a founder. The core challenge was to generalize the entire user experience—from the Firestore data model and API routes to the UI components and marketing copy—while preserving the app's stability and signature "glassmorphism" aesthetic.
+                The initial spark came from the frustration of organizing pickup cricket games, but this quickly pivoted into a generalized, dynamic map view. The core challenge became re-architecting the entire application—from the Firestore data model to the UI components—to scale across different event types while preserving its signature speed and "glassmorphism" aesthetic.
               </p>
             </div>
 
