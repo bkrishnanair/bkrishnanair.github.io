@@ -1,0 +1,25 @@
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #121212;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+.initials {
+  font-family: 'Playfair Display', serif;
+  font-size: 4rem;
+  color: #D4AF37;
+  letter-spacing: 0.2em;
+  font-weight: 700;
+  text-shadow: 0 4px 32px rgba(212,175,55,0.18);
+}
+@media (max-width: 600px) {
+  .initials {
+    font-size: 2.2rem;
+  }
+} 
