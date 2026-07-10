@@ -1,0 +1,124 @@
+.huddleShowcase {
+  padding: 100px 20px;
+  background-color: #f9f9f9;
+  color: #333;
+  font-family: 'Poppins', sans-serif;
+}
+
+.huddleContent {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  max-width: 1400px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.leftColumn {
+  padding-right: 40px;
+}
+
+.projectTitle {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.links {
+  margin-bottom: 30px;
+}
+
+.linkButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 24px;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  margin-right: 15px;
+}
+
+.linkButton:hover {
+  background-color: #555;
+  transform: translateY(-2px);
+}
+
+.narrative {
+  margin-bottom: 30px;
+  line-height: 1.8;
+}
+
+.features {
+  margin-bottom: 30px;
+}
+
+.features h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.features ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.features li {
+  margin-bottom: 10px;
+}
+
+.techStack h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.techIcons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.techIcons span {
+  background-color: #eee;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+.rightColumn {
+  text-align: center;
+}
+
+.heroAsset video {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.gallery img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 992px) {
+  .huddleContent {
+    grid-template-columns: 1fr;
+  }
+}

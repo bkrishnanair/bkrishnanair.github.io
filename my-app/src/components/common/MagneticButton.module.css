@@ -1,0 +1,16 @@
+.magneticButtonWrapper {
+  display: inline-block;
+}
+
+.magneticButton {
+  /* Inherit styles from where it's used or define base styles */
+  padding: 0.7rem 2rem;
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  position: relative; /* Important for magnetic effect */
+  z-index: 3;
+}

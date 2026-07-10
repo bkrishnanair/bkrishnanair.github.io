@@ -1,0 +1,108 @@
+.hero {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+.heroContent {
+  z-index: 3;
+  color: #fff;
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.greetHeading {
+  font-size: 1.3rem;
+  color: #00d8ff;
+  margin-bottom: 0.5rem;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+}
+.myHeading {
+  font-size: 2.8rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #fff;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+}
+.subHeading {
+  font-size: 1.5rem;
+  color: #fff;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+}
+.bio {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  color: #bdbdbd;
+  text-shadow: 1px 1px 6px rgba(0,0,0,0.5);
+}
+.introButtons {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+.btn {
+  padding: 0.7rem 2rem;
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  position: relative;
+  z-index: 3;
+}
+.commonBtn {
+  background: #00d8ff;
+  color: #181818;
+  box-shadow: 0 2px 8px rgba(0,216,255,0.2);
+}
+.commonBtn:hover {
+  background: #fff;
+  color: #00d8ff;
+}
+.ghostBtn {
+  background: transparent;
+  color: #00d8ff;
+  border: 2px solid #00d8ff;
+}
+.ghostBtn:hover {
+  background: #00d8ff;
+  color: #fff;
+  border: 2px solid #00d8ff;
+}
+.heroName {
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  color: #00d8ff;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+} 
