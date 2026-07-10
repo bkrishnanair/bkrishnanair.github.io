@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { motion, useAnimation } from 'framer-motion';
-import { FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa';
+import { FaLinkedin, FaGithub, FaEnvelope, FaPaperPlane, FaCheckCircle } from 'react-icons/fa';
+import emailjs from 'emailjs-com';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -10,6 +11,7 @@ const Contact = () => {
     message: '',
   });
   const [errors, setErrors] = useState({});
+  const [status, setStatus] = useState({ submitting: false, success: false, error: false });
 
   const controls = useAnimation();
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.15 });
@@ -41,20 +43,25 @@ const Contact = () => {
       return;
     }
 
-    // Build the mailto URL
-    const subject = formData.subject.trim() || `Portfolio Inquiry from ${formData.name}`;
-    const body = `Hi Balakrishna,\n\n${formData.message}\n\nBest,\n${formData.name}`;
+    setStatus({ submitting: true, success: false, error: false });
 
-    const mailtoLink = `mailto:bkrishna@umd.edu?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    // TODO: Replace these placeholders with actual EmailJS keys from dashboard
+    const SERVICE_ID = 'service_rrof4wb';
+    const TEMPLATE_ID = 'template_k2e25n2';
+    const PUBLIC_KEY = 'wEqtEwGWnua267xbd';
 
-    // Use window.location.href for maximum browser compatibility with mailto:
-    window.location.href = mailtoLink;
-
-    // Clear form after a short delay (gives the mail client time to open)
-    setTimeout(() => {
-      setFormData({ name: '', subject: '', message: '' });
-      setErrors({});
-    }, 1500);
+    emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.target, PUBLIC_KEY)
+      .then((result) => {
+        setStatus({ submitting: false, success: true, error: false });
+        setFormData({ name: '', subject: '', message: '' });
+        setErrors({});
+        setTimeout(() => {
+          setStatus(s => ({ ...s, success: false }));
+        }, 4000);
+      }, (error) => {
+        console.error('EmailJS Error:', error);
+        setStatus({ submitting: false, success: false, error: true });
+      });
   };
 
   return (
@@ -64,7 +71,7 @@ const Contact = () => {
         animate={controls}
         className="flex flex-col lg:flex-row gap-16 items-start"
       >
-        
+
         {/* Left Side: Contact Methods & Text */}
         <div className="flex-1 w-full text-left">
           <h2 className="text-4xl md:text-5xl font-outfit font-bold text-offwhite mb-6">Let's Connect</h2>
@@ -85,7 +92,7 @@ const Contact = () => {
                 <div className="font-jakarta text-offwhite/60 text-sm">bkrishna@umd.edu (Preferred)</div>
               </div>
             </a>
-            
+
             <a href="https://www.linkedin.com/in/bkrishnanair" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 text-offwhite hover:text-cyan transition-colors group">
               <span className="w-12 h-12 flex items-center justify-center bg-white/5 border border-white/10 rounded-full group-hover:bg-cyan/10 group-hover:border-cyan/30 transition-all">
                 <FaLinkedin size={20} />
@@ -125,7 +132,7 @@ const Contact = () => {
               />
               {errors.name && <span className="text-red-400 text-sm font-jakarta">{errors.name}</span>}
             </div>
-            
+
             <div className="flex flex-col gap-2">
               <label className="font-outfit text-sm text-offwhite/80 font-bold uppercase tracking-wider">Subject</label>
               <input
@@ -152,16 +159,23 @@ const Contact = () => {
               ></textarea>
               {errors.message && <span className="text-red-400 text-sm font-jakarta">{errors.message}</span>}
             </div>
-            
+
             <button
               type="submit"
-              className="mt-4 px-8 py-4 w-full rounded-xl bg-cyan text-slate font-bold font-jakarta text-lg transition-all hover:bg-offwhite flex items-center justify-center gap-3 shadow-[0_0_20px_rgba(45,212,191,0.3)] hover:shadow-[0_0_30px_rgba(45,212,191,0.6)] cursor-pointer"
+              disabled={status.submitting || status.success}
+              className={`mt-4 px-8 py-4 w-full rounded-xl font-bold font-jakarta text-lg transition-all flex items-center justify-center gap-3 shadow-[0_0_20px_rgba(45,212,191,0.3)] hover:shadow-[0_0_30px_rgba(45,212,191,0.6)] cursor-pointer ${status.success ? 'bg-green-500 text-slate shadow-none cursor-default' : 'bg-cyan text-slate hover:bg-offwhite'}`}
             >
-              Open Email Draft <FaEnvelope />
+              {status.submitting ? 'Sending...' : status.success ? <><FaCheckCircle /> Sent Successfully</> : <>Send Message <FaPaperPlane /></>}
             </button>
 
-            <p className="text-xs text-offwhite/50 font-jakarta text-center">
-              This will open your default email client with the message pre-filled.
+            {status.error && (
+              <p className="text-sm text-red-400 font-jakarta text-center mt-2">
+                Oops, something went wrong. Please try again later or email directly.
+              </p>
+            )}
+
+            <p className="text-xs text-offwhite/50 font-jakarta text-center mt-2">
+              Protected by reCAPTCHA and subject to the Google Privacy Policy.
             </p>
           </div>
         </form>

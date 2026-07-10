@@ -1,6 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FaAws, FaHackerrank } from 'react-icons/fa';
+import resumeData from '../../data/resume.json';
+
+const certs = resumeData.certifications;
 
 const Certifications = () => {
   return (
@@ -30,11 +33,8 @@ const Certifications = () => {
           <div className="text-6xl text-amber-500 mb-6 drop-shadow-[0_0_15px_rgba(245,158,11,0.4)]">
             <FaAws />
           </div>
-          <h3 className="text-2xl font-outfit font-bold text-offwhite mb-3">AWS Certified Solutions Architect</h3>
-          <p className="text-offwhite/70 font-jakarta leading-relaxed">
-            Associate (SAA-C03) <br />
-            Target: May 2026
-          </p>
+          <h3 className="text-2xl font-outfit font-bold text-offwhite mb-3">{certs[0].name}</h3>
+          <p className="text-offwhite/70 font-jakarta leading-relaxed" dangerouslySetInnerHTML={{ __html: certs[0].details }} />
         </motion.div>
 
         {/* HackerRank Certification Card */}
@@ -51,9 +51,9 @@ const Certifications = () => {
           <div className="text-6xl text-[#00EA64] mb-6 drop-shadow-[0_0_15px_rgba(0,234,100,0.3)]">
             <FaHackerrank />
           </div>
-          <h3 className="text-2xl font-outfit font-bold text-offwhite mb-3">HackerRank Skill Certified</h3>
+          <h3 className="text-2xl font-outfit font-bold text-offwhite mb-3">{certs[1].name}</h3>
           <p className="text-offwhite/70 font-jakarta leading-relaxed">
-            Python, JavaScript, REST API, SQL
+            {certs[1].details}
           </p>
         </motion.div>
 

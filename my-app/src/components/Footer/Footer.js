@@ -2,7 +2,7 @@ import React from 'react';
 import { FaLinkedin, FaGithub, FaEnvelope, FaFileDownload } from 'react-icons/fa';
 
 const Footer = () => {
-  const lastUpdated = "April 2026"; // Dynamic placeholder, or statically defined per the build
+  const lastUpdated = "July 2026"; // Dynamic placeholder, or statically defined per the build
 
   return (
     <footer className="w-full bg-black/50 border-t border-white/10 py-12 mt-20 relative z-10">
@@ -22,7 +22,7 @@ const Footer = () => {
           <a href="https://github.com/bkrishnanair" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="w-12 h-12 flex items-center justify-center bg-white/5 hover:bg-cyan hover:text-slate border border-white/10 rounded-full transition-all text-offwhite">
             <FaGithub size={20} />
           </a>
-          <a href="https://drive.google.com/drive/folders/1VoKsNrn7fdTpcnJuDrtM8dOyr-5OiZPJ?usp=drive_link" target="_blank" rel="noopener noreferrer" title="View Resume Folder" className="w-12 h-12 flex items-center justify-center bg-white/5 hover:bg-cyan hover:text-slate border border-white/10 rounded-full transition-all text-offwhite">
+          <a href="https://drive.google.com/drive/folders/1VoKsNrn7fdTpcnJuDrtM8dOyr-5OiZPJ?usp=sharing" target="_blank" rel="noopener noreferrer" title="View Resume Folder" className="w-12 h-12 flex items-center justify-center bg-white/5 hover:bg-cyan hover:text-slate border border-white/10 rounded-full transition-all text-offwhite">
             <FaFileDownload size={20} />
           </a>
         </div>

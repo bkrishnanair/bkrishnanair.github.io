@@ -1,0 +1,165 @@
+{
+  "meta": {
+    "siteTitle": "Balakrishna Nair — Software Engineer",
+    "siteDescription": "Software Engineer | M.Eng Software Engineering, University of Maryland | Backend, Full-Stack & Cloud | Creator of Huddle",
+    "resumeUrl": "https://drive.google.com/drive/folders/1VoKsNrn7fdTpcnJuDrtM8dOyr-5OiZPJ?usp=sharing"
+  },
+  "basics": {
+    "name": "Balakrishna Nair Nalivalapil",
+    "displayName": "Balakrishna Nair",
+    "title": "Software Engineer",
+    "tagline": "Enterprise reliability. Startup velocity.",
+    "summary": "Software Engineer combining 2 years of enterprise backend experience with proven founder-level product ownership. Brings enterprise CI/CD discipline and startup shipping velocity.",
+    "education": "Master's in Software Engineering from the University of Maryland — May 2026.",
+    "availability": "Available for full-time roles — available immediately (OPT active)",
+    "location": "College Park, MD",
+    "email": "bkrishna@umd.edu",
+    "phone": "(240) 476-6045",
+    "profiles": {
+      "linkedin": "https://www.linkedin.com/in/bkrishnanair",
+      "github": "https://github.com/bkrishnanair",
+      "portfolio": "https://bkrishnanair.github.io"
+    }
+  },
+  "stats": [
+    { "value": "2+", "label": "Years Exp", "description": "In Enterprise Engineering" },
+    { "value": "$100M+", "label": "Processed", "description": "Daily banking transactions" },
+    { "value": "20+", "label": "Solutions", "description": "Production deployments" },
+    { "value": "10+", "label": "Projects", "description": "Successfully shipped apps" }
+  ],
+  "about": {
+    "paragraphs": [
+      "I'm a Software Engineer with a Master's in Software Engineering from the University of Maryland (May 2026). I bring 2 years of prior enterprise experience from Capgemini Technology Services (Oct 2022 – Sep 2024), where I engineered integration systems for MUFG Bank within a 100+ member global engineering organization supporting a platform processing over $100M in daily transactions.",
+      "My engineering philosophy sits at the intersection of enterprise rigor and modern product velocity. I build reliable, scalable full-stack applications with Java, Python, TypeScript, and Next.js, and I integrate generative AI (Gemini, Llama3) into real products — not just prototypes.",
+      "I take ownership from the database schema to the deployment pipeline. Most recently that means Huddle, a production geospatial platform I designed, built, and launched solo."
+    ]
+  },
+  "experience": [
+    {
+      "role": "Software Engineer → Senior Software Engineer, Enterprise Integration",
+      "company": "Capgemini Technology Services",
+      "dates": "Oct 2022 – Sep 2024",
+      "bullets": [
+        "Delivered 20+ production RESTful services and integration pipelines within a 100+ member global engineering organization supporting MUFG Bank's transaction platform processing $100M+ daily, by designing Java-based middleware on IBM Integration Bus.",
+        "Reduced post-deployment incidents 25% by building event-driven middleware with structured logging and monitoring across distributed services using WebSphere MQ.",
+        "Cut feature integration time 30% across 5 application teams by architecting automated build-test-deploy CI/CD pipelines with Jenkins and JFrog Artifactory."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "title": "Huddle - Community Operating System",
+      "image": "/images/huddle-cover.jpg",
+      "tags": ["Next.js 15", "TypeScript", "React", "Firebase", "Firestore", "Google Maps API", "Tailwind CSS", "Vercel"],
+      "shortDesc": "Launched a production hyperlocal event-discovery platform with live campus users. Prevented race conditions across 500+ events under concurrent load by engineering transactional Firestore writes. Cut redundant API calls 90% via viewport debouncing.",
+      "problem": "Huddle began with a problem I lived every day at UMD — the chaos of discovering and organizing local campus events.",
+      "solution": "What started as a small MVP evolved, through mentorship from the Dingman Center Hatchery program, into a scalable hyperlocal platform. We utilized Next.js 15, TypeScript, and Firebase to create real-time discoverability.",
+      "impact": "Grew to successfully track 500+ events, acting as the centralized hub for community engagement on campus.",
+      "liveUrl": "https://www.huddlemap.live/",
+      "githubUrl": "https://github.com/bkrishnanair/huddle_v0",
+      "isFeatured": true
+    },
+    {
+      "title": "ClassNest - AI-Powered Learning Management System",
+      "image": "https://images.unsplash.com/photo-1513258496099-48168024aec0?auto=format&fit=crop&w=600&q=80",
+      "tags": ["Django", "React", "PostgreSQL", "Llama3", "Groq API", "Docker"],
+      "shortDesc": "Enforced 90% test coverage via Test-Driven Development (Django/React). Automated PDF-to-quiz conversion by engineering an LLM pipeline with Llama3 via Groq API.",
+      "problem": "Educators often spend significant manual effort creating engaging and relevant learning materials. The challenge was to design a system that could automate content creation and provide a scalable, multi-user learning environment.",
+      "solution": "I led the development of a full-featured LMS using a Django MVT backend and a React frontend. The core innovation was an AI-driven quiz generation module using the Groq API and Llama3 LLM, which automatically converts uploaded PDF documents into interactive quizzes. The system also features secure, role-based access control for administrators, educators, and students.",
+      "impact": "This system significantly enhances educator efficiency by automating content creation. The AI-powered features provide a more dynamic and adaptive learning experience for students, directly addressing the need for modern, intelligent educational tools.",
+      "liveUrl": null,
+      "githubUrl": "https://github.com/bkrishnanair/classnest",
+      "isFeatured": false
+    },
+    {
+      "title": "IoT Smart Health Monitoring System",
+      "image": "https://images.unsplash.com/photo-1516574187841-cb9cc2ca948b?auto=format&fit=crop&w=600&q=80",
+      "tags": ["IoT", "Python", "Arduino", "Raspberry Pi", "Sensors"],
+      "shortDesc": "IoT-based system for real-time remote patient health monitoring and alerts.",
+      "problem": "Healthcare providers require a reliable method to monitor patients' vital signs remotely to provide timely care, especially for those with chronic conditions or in post-operative recovery.",
+      "solution": "As team lead, I architected an IoT-based system that uses Arduino and Raspberry Pi to collect real-time patient data (heart rate, temperature, oxygen levels) from various sensors. I then developed a responsive web interface to display this data clearly, allowing for remote monitoring by medical professionals.",
+      "impact": "The system successfully demonstrated a viable solution for improving remote healthcare delivery. It ensures continuous monitoring and enables faster interventions, bridging the communication gap between patients and doctors.",
+      "liveUrl": null,
+      "githubUrl": "https://github.com/bkrishnanair/iot-health-monitor",
+      "isFeatured": false
+    },
+    {
+      "title": "GitHub Issues & Contributor Analysis",
+      "image": "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=600&q=80",
+      "tags": ["Python", "Pandas", "Matplotlib", "Data Analysis"],
+      "shortDesc": "Data analysis and visualization of open-source project health and contributor trends.",
+      "problem": "Large open-source projects like 'Poetry' struggle to understand contributor engagement trends and identify bottlenecks in issue resolution, which can slow down development and discourage new contributors.",
+      "solution": "I performed a comprehensive data analysis on the Poetry project's GitHub repository. Using Python, Pandas, and Matplotlib, I processed and visualized issue data to reveal patterns in contributor engagement and project responsiveness. I also developed unit tests to ensure the reliability of the data processing workflow.",
+      "impact": "My analysis provided actionable insights into the project's health, identifying key areas for improving community management and issue triage. The visualizations made complex data easily understandable for project maintainers.",
+      "liveUrl": null,
+      "githubUrl": "https://github.com/bkrishnanair/poetry-issues-analysis",
+      "isFeatured": false
+    },
+    {
+      "title": "Real-Time Utility Consumption Monitor",
+      "image": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80",
+      "tags": ["IoT", "Python", "Django", "Arduino", "Data Visualization"],
+      "shortDesc": "IoT and Django web app for real-time tracking and visualization of utility usage.",
+      "problem": "Households often lack real-time visibility into their electricity and water usage, making it difficult to manage consumption, identify waste, and control costs effectively.",
+      "solution": "I designed and built a complete IoT solution, from hardware to software. Using Arduino and Raspberry Pi, I created a custom energy meter to capture real-time data. This data was then sent to a Django web application I developed, which provided users with a friendly interface to track and visualize their consumption patterns over time.",
+      "impact": "The web app empowered users with immediate feedback on their utility usage, enabling them to make informed decisions to conserve resources and reduce their monthly bills.",
+      "liveUrl": null,
+      "githubUrl": "https://github.com/bkrishnanair/utility-monitor",
+      "isFeatured": false
+    }
+  ],
+  "skills": {
+    "Languages": ["Python", "TypeScript", "JavaScript", "Java", "C++", "SQL"],
+    "Frontend": ["React", "Next.js 15", "Tailwind CSS", "Framer Motion", "Jest"],
+    "Backend": ["Node.js", "Django", "Spring Boot", "REST APIs", "GraphQL"],
+    "Cloud & DevOps": ["AWS", "GCP", "Firebase", "Docker", "Jenkins", "CI/CD", "Git"],
+    "Databases": ["PostgreSQL", "MongoDB", "Cloud Firestore", "Redis"],
+    "AI & Data": ["Gemini", "Llama3", "LangChain", "Pandas"]
+  },
+  "certifications": [
+    {
+      "name": "AWS Certified Solutions Architect",
+      "issuer": "Amazon Web Services",
+      "status": "In Progress",
+      "details": "Associate (SAA-C03) <br />Target: May 2026",
+      "icon": "FaAws",
+      "color": "amber-500"
+    },
+    {
+      "name": "HackerRank Skill Certified",
+      "issuer": "HackerRank",
+      "status": "Verified",
+      "details": "Python, JavaScript, REST API, SQL",
+      "icon": "FaHackerrank",
+      "color": "[#00EA64]"
+    }
+  ],
+  "huddleShowcase": {
+    "title": "Huddle: Discover. Create. Connect.",
+    "liveDemoUrl": "https://www.huddlemap.live/",
+    "sourceCodeUrl": "https://github.com/bkrishnanair/huddle_v0",
+    "paragraphs": [
+      "Huddle began with a problem I lived every day at UMD — the chaos of discovering and organizing local campus events. What started as a small MVP evolved, through mentorship from the Dingman Center Hatchery program, into a scalable hyperlocal platform designed to be the \"operating system for local communities.\"",
+      "The initial spark came from the frustration of organizing pickup cricket games, but this quickly pivoted into a generalized, dynamic map view. The core challenge became re-architecting the entire application—from the Firestore data model to the UI components—to scale across different event types while preserving its signature speed and \"glassmorphism\" aesthetic."
+    ],
+    "features": [
+      {
+        "title": "Scalable Serverless Backend",
+        "desc": "Built on a modern, serverless architecture using Next.js 15 API Routes and Firebase for security and performance at scale."
+      },
+      {
+        "title": "Dynamic, Real-Time Map View",
+        "desc": "Utilizes the Google Maps Platform with custom, cloud-based styling to serve as the central hub for discovering local events in real-time."
+      },
+      {
+        "title": "AI-Assisted Event Creation",
+        "desc": "Features an intuitive, multi-step modal that integrates the Google Gemini API to help organizers generate catchy, context-aware titles and descriptions."
+      },
+      {
+        "title": "Secure Authentication & Community Tools",
+        "desc": "A complete authentication system with user profiles, a trust-building \"check-in\" system, and event-specific real-time chat."
+      }
+    ],
+    "techStack": ["Next.js", "React", "TypeScript", "Tailwind CSS", "Framer Motion", "Firebase", "Firestore", "Google Maps API", "Gemini API", "Vercel"]
+  }
+}

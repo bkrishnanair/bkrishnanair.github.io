@@ -1,5 +1,6 @@
 import React, { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
+import resumeData from '../../data/resume.json';
 import ThreeDObject from './ThreeDObject';
 import MagneticButton from '../common/MagneticButton';
 
@@ -56,7 +57,7 @@ const Hero = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.6 }}
         >
-          Master's in Software Engineering at University of Maryland &mdash; graduating May 2026.
+          {resumeData.basics.education}
         </motion.p>
 
         <motion.p
@@ -65,7 +66,7 @@ const Hero = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.7 }}
         >
-          Building reliable, scalable full-stack systems. 2+ years enterprise experience.
+          {resumeData.basics.summary}
         </motion.p>
 
         <motion.div
@@ -75,7 +76,7 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 0.8 }}
         >
           <div className="w-2.5 h-2.5 rounded-full bg-green-500 animate-pulse"></div>
-          Available for full-time roles starting June 15, 2026
+          {resumeData.basics.availability}
         </motion.div>
 
         <motion.div
@@ -86,7 +87,7 @@ const Hero = () => {
         >
           <MagneticButton
             className="px-6 py-3 rounded-full bg-cyan text-slate font-bold font-jakarta text-lg transition-all hover:bg-offwhite hover:text-cyan shadow-[0_0_20px_rgba(45,212,191,0.5)] hover:shadow-[0_0_30px_rgba(45,212,191,0.8)]"
-            onClick={() => window.open('https://drive.google.com/drive/folders/1VoKsNrn7fdTpcnJuDrtM8dOyr-5OiZPJ?usp=drive_link', '_blank')}
+            onClick={() => window.open(resumeData.meta.resumeUrl, '_blank')}
           >
             Get Resume
           </MagneticButton>

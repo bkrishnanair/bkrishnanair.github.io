@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './About.module.css';
 import { useInView } from 'react-intersection-observer';
 import { motion, useAnimation } from 'framer-motion';
+import resumeData from '../../data/resume.json';
 
 const About = () => {
   const controls = useAnimation();
@@ -34,15 +35,9 @@ const About = () => {
         </motion.div>
         <div className={styles.aboutText}>
           <h1 className={styles.myHeading}>About Me</h1>
-          <p>
-            I'm a Software Engineer completing my Master's in Software Engineering at the University of Maryland (graduating May 2026). I bring 2 years of prior enterprise experience from Capgemini Technology Services, where I architected high-volume banking integration systems processing daily transactions for MUFG Bank.
-          </p>
-          <p>
-            My engineering philosophy sits at the intersection of enterprise rigor and modern product velocity. I specialize in building reliable, scalable full-stack applications using Next.js, TypeScript, and cloud platforms (AWS, GCP, Firebase), while integrating emerging technologies like Generative AI (Gemini, Llama3) to solve real-world problems.
-          </p>
-          <p>
-            I'm a tenacious debugger, a fast learner, and an engineer who takes ownership from the database schema to the deployment pipeline. Currently open to full-time Software Engineering roles starting June 2026.
-          </p>
+          {resumeData.about.paragraphs.map((para, idx) => (
+            <p key={idx}>{para}</p>
+          ))}
         </div>
       </div>
     </motion.section>

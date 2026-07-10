@@ -1,11 +1,14 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaGithub } from 'react-icons/fa';
 import { FiExternalLink } from 'react-icons/fi';
+import { FaServer, FaMapMarkedAlt, FaRobot, FaShieldAlt, FaGithub } from 'react-icons/fa';
+import resumeData from '../../data/resume.json';
 import heroVideo from './huddleshow/video.mp4';
 import landingPage from './huddleshow/neraby happenings.jpg';
 import createEvent from './huddleshow/join game.jpg';
 import userProfile from './huddleshow/profile.jpg';
+
+const showcaseData = resumeData.huddleShowcase;
 
 const HuddleShowcase = () => {
   return (
@@ -20,39 +23,36 @@ const HuddleShowcase = () => {
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-4xl md:text-5xl font-outfit font-bold text-offwhite mb-6 leading-tight">
-              Huddle: Discover. Create. Connect.
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-outfit font-bold text-offwhite mb-6 leading-tight">
+              {showcaseData.title.split(': ')[0]}: <span className="text-cyan">{showcaseData.title.split(': ')[1]}</span>
             </h1>
 
             <div className="flex flex-wrap gap-4 mb-10">
-              <a href="https://huddlev1.vercel.app/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3 bg-cyan text-slate font-bold font-jakarta rounded-full hover:bg-offwhite hover:text-cyan transition-colors shadow-[0_0_15px_rgba(45,212,191,0.3)]">
+              <a href={showcaseData.liveDemoUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3 bg-cyan text-slate font-bold font-jakarta rounded-full hover:bg-offwhite hover:text-cyan transition-colors shadow-[0_0_15px_rgba(45,212,191,0.3)]">
                 Live Demo <FiExternalLink />
               </a>
-              <a href="https://github.com/bkrishnanair/huddle_v0" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3 bg-transparent border-2 border-cyan text-cyan font-bold font-jakarta rounded-full hover:bg-cyan hover:text-slate transition-colors">
+              <a href={showcaseData.sourceCodeUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3 bg-transparent border-2 border-cyan text-cyan font-bold font-jakarta rounded-full hover:bg-cyan hover:text-slate transition-colors">
                 Source Code <FaGithub />
               </a>
             </div>
 
-            <div className="bg-slate/30 backdrop-blur-xl border border-white/5 rounded-3xl p-6 md:p-8 mb-8 text-offwhite/80 font-jakarta leading-relaxed space-y-4">
-              <p>
-                Huddle began with a problem I lived every day at UMD — the chaos of discovering and organizing local campus events. What started as a small MVP evolved, through mentorship from the Dingman Center Hatchery program, into a scalable hyperlocal platform designed to be the "operating system for local communities."
-              </p>
-              <p>
-                The initial spark came from the frustration of organizing pickup cricket games, but this quickly pivoted into a generalized, dynamic map view. The core challenge became re-architecting the entire application—from the Firestore data model to the UI components—to scale across different event types while preserving its signature speed and "glassmorphism" aesthetic.
-              </p>
+            <div className="space-y-6 text-offwhite/80 font-jakarta leading-relaxed text-lg mb-10">
+              {showcaseData.paragraphs.map((para, idx) => (
+                <p key={idx}>{para}</p>
+              ))}
             </div>
 
             <div className="mb-10">
               <h2 className="text-2xl font-outfit font-bold text-gold mb-6">Key Features</h2>
               <ul className="space-y-4">
                 {[
-                  { title: 'Scalable Serverless Backend', desc: 'Built on a modern, serverless architecture using Next.js 15 API Routes and Firebase for security and performance at scale.' },
-                  { title: 'Dynamic, Real-Time Map View', desc: 'Utilizes the Google Maps Platform with custom, cloud-based styling to serve as the central hub for discovering local events in real-time.' },
-                  { title: 'AI-Assisted Event Creation', desc: 'Features an intuitive, multi-step modal that integrates the Google Gemini API to help organizers generate catchy, context-aware titles and descriptions.' },
-                  { title: 'Secure Authentication & Community Tools', desc: 'A complete authentication system with user profiles, a trust-building "check-in" system, and event-specific real-time chat.' }
+                  { icon: <FaServer className="text-2xl text-cyan" />, title: showcaseData.features[0].title, desc: showcaseData.features[0].desc },
+                  { icon: <FaMapMarkedAlt className="text-2xl text-amber-400" />, title: showcaseData.features[1].title, desc: showcaseData.features[1].desc },
+                  { icon: <FaRobot className="text-2xl text-purple-400" />, title: showcaseData.features[2].title, desc: showcaseData.features[2].desc },
+                  { icon: <FaShieldAlt className="text-2xl text-green-400" />, title: showcaseData.features[3].title, desc: showcaseData.features[3].desc }
                 ].map((feature, idx) => (
                   <li key={idx} className="flex items-start gap-3">
-                    <span className="text-cyan mt-1 opacity-80">▹</span>
+                    <span className="mt-1">{feature.icon}</span>
                     <span className="font-jakarta text-offwhite/80 leading-relaxed">
                       <strong className="text-offwhite font-semibold">{feature.title}: </strong>{feature.desc}
                     </span>
@@ -63,8 +63,8 @@ const HuddleShowcase = () => {
 
             <div>
               <h2 className="text-2xl font-outfit font-bold text-gold mb-6">Tech Stack</h2>
-              <div className="flex flex-wrap gap-3">
-                {['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'Firebase', 'Firestore', 'Google Maps API', 'Gemini API', 'Vercel'].map((tech, idx) => (
+              <div className="flex flex-wrap gap-2">
+                {showcaseData.techStack.map((tech, idx) => (
                   <motion.span
                     key={idx}
                     className="px-4 py-2 bg-white/5 border border-white/10 text-cyan text-sm font-jakarta font-medium rounded-full cursor-default"

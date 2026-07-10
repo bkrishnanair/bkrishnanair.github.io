@@ -1,21 +1,9 @@
 import React, { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
-
-const experiences = [
-  {
-    role: 'Senior Software Engineer',
-    company: 'Capgemini',
-    dates: 'Oct 2022 – Sep 2024',
-    bullets: [
-      'Promoted to Senior Software Engineer within 18 months.',
-      'Designed and deployed 20+ integration solutions for MUFG Bank using IBM Integration Bus, securely processing high-volume transactions exceeding $100M daily.',
-      'Enhanced system observability and logging strategies, achieving a 25% reduction in post-deployment errors.',
-      'Architected CI/CD pipelines using Jenkins and Python, which accelerated release cycles and reduced feature integration time by 30%.'
-    ]
-  }
-];
+import resumeData from '../../data/resume.json';
 
 const Experience = () => {
+  const experiences = resumeData.experience;
   const containerRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: containerRef,

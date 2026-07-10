@@ -1,14 +1,8 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import resumeData from '../../data/resume.json';
 
-const skillCategories = {
-  Languages: ['Python', 'TypeScript', 'JavaScript', 'Java', 'C++', 'SQL'],
-  Frontend: ['React', 'Next.js 15', 'Tailwind CSS', 'Framer Motion', 'Jest'],
-  Backend: ['Node.js', 'Django', 'Spring Boot', 'REST APIs', 'GraphQL'],
-  'Cloud & DevOps': ['AWS', 'GCP', 'Firebase', 'Docker', 'Jenkins', 'CI/CD', 'Git'],
-  Databases: ['PostgreSQL', 'MongoDB', 'Cloud Firestore', 'Redis'],
-  'AI & Data': ['Gemini', 'Llama3', 'LangChain', 'Pandas'],
-};
+const skillCategories = resumeData.skills;
 
 const Skills = () => {
   const [activeTab, setActiveTab] = useState('Languages');

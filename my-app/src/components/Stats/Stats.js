@@ -1,5 +1,6 @@
 import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
+import resumeData from '../../data/resume.json';
 
 const StatCard = ({ value, label, description }) => {
   const ref = useRef(null);
@@ -27,12 +28,7 @@ const StatCard = ({ value, label, description }) => {
 };
 
 const Stats = () => {
-  const statsData = [
-    { value: "2+", label: "Years Exp", description: "In Enterprise Engineering" },
-    { value: "$100M+", label: "Processed", description: "Daily banking transactions" },
-    { value: "20+", label: "Solutions", description: "Production deployments" },
-    { value: "10+", label: "Projects", description: "Successfully shipped apps" },
-  ];
+  const statsData = resumeData.stats;
 
   return (
     <section className="py-20 px-4 md:px-8 max-w-6xl mx-auto -mt-16 relative z-30">
