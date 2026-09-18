@@ -1,11 +1,1 @@
-{
-  "devDependencies": {
-    "source-map-explorer": "^2.5.3"
-  },
-  "dependencies": {
-    "@react-three/drei": "^10.6.0",
-    "@react-three/fiber": "^9.2.0",
-    "react-router-dom": "^7.7.1",
-    "three": "^0.178.0"
-  }
-}
+{"name":"balakrishna-portfolio","private":true,"scripts":{"dev":"npm --prefix my-app run dev","build":"npm --prefix my-app run build","test":"npm --prefix my-app test","preview":"npm --prefix my-app run preview","deploy":"npm --prefix my-app run deploy"}}
