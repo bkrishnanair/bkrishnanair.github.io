@@ -1,6 +1,6 @@
 # Balakrishna Nair — portfolio
 
-A backend-focused engineering portfolio with production case studies, professional experience, and a downloadable résumé. Built with React and Vite, published as static HTML on GitHub Pages.
+A backend-focused engineering portfolio with production case studies, professional experience, and a shared folder for the latest résumé and cover letter. Built with React and Vite, published as static HTML on GitHub Pages.
 
 ## Local development
 
@@ -36,8 +36,8 @@ The local preview intentionally serves files like a static host, rather than ret
 ## Updating the profile
 
 1. Edit `my-app/src/data/resume.json`.
-2. Replace `my-app/public/Balakrishna_Nair_Resume.pdf` when the résumé changes.
-3. Run `npm --prefix my-app run format`, then `npm test`.
+2. To update your résumé or general cover letter, replace the documents in the [shared Google Drive folder](https://drive.google.com/drive/folders/1VoKsNrn7fdTpcnJuDrtM8dOyr-5OiZPJ?usp=drive_link). This does not require a Git commit or deployment. Keep the folder link and public viewer access unchanged.
+3. For website content changes only, run `npm --prefix my-app run format`, then `npm test`.
 4. Inspect the production preview at mobile and desktop sizes.
 
 Primary email: `bkrishna@terpmail.umd.edu`, explicitly confirmed by the owner. AWS certification remains in progress. Do not publish unsupported claims or infer completed certifications from old target dates. See `docs/content-evidence.md` for sources and decisions.
@@ -54,10 +54,10 @@ npm run deploy
 
 This runs the build and tests before publishing only `my-app/dist/` to `gh-pages`, including `.nojekyll`. It does not push the source branch; commit and push source changes separately. The CI workflow checks pull requests and source pushes; it does not publish them automatically.
 
-After deployment, check the homepage, direct project URLs, refreshes, unknown routes, résumé download, and social image on the public domain. Local checks cannot certify a deployment that has not happened.
+After deployment, check the homepage, direct project URLs, refreshes, unknown routes, résumé folder link, and social image on the public domain. Local checks cannot certify a deployment that has not happened.
 
 ## Assets
 
-The portrait comes from the original repository. The Huddle image is an actual screenshot of its public website, captured for this portfolio. Smaller projects use labeled workflow diagrams rather than invented screenshots. The résumé is the PDF supplied by the owner. Inter is self-hosted through Fontsource under the SIL Open Font License.
+The portrait comes from the original repository. The Huddle image is an actual screenshot of its public website, captured for this portfolio. Smaller projects use labeled workflow diagrams rather than invented screenshots. The résumé buttons open the owner's Google Drive folder in a new tab. The original supplied PDF remains at its old URL for backward compatibility; the website no longer links to that snapshot. Inter is self-hosted through Fontsource under the SIL Open Font License.
 
 The original rebuild proposal is retained in `docs/original-rebuild-brief.md` as historical context. The decisions above supersede its implementation constraints, following the owner's request to reconcile multiple proposals with engineering judgment.

@@ -31,11 +31,13 @@ const LinkOut = ({ href, children, className = "" }) => (
 const ResumeLink = ({ compact = false }) => (
   <a
     className={compact ? "nav-resume" : "button button-secondary"}
-    href={data.meta.resumePath}
-    download
+    href={data.meta.resumeUrl}
+    target="_blank"
+    rel="noopener noreferrer"
+    title={ui.resumeDocuments}
   >
-    {compact ? ui.resume : ui.downloadResume}
-    <Arrow down />
+    {compact ? ui.resume : ui.resumeDocuments}
+    <Arrow diagonal />
   </a>
 );
 const Tags = ({ items }) => (

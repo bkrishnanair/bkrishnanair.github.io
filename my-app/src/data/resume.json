@@ -12,7 +12,8 @@
       "line2": "Real-world products.",
       "footer": "CAPGEMINI / MUFG  ·  UMD M.ENG  ·  FOUNDER, HUDDLE"
     },
-    "resumeAliases": ["/Balakrishna Nair_Resume.pdf"]
+    "resumeAliases": ["/Balakrishna Nair_Resume.pdf"],
+    "resumeUrl": "https://drive.google.com/drive/folders/1VoKsNrn7fdTpcnJuDrtM8dOyr-5OiZPJ?usp=drive_link"
   },
   "basics": {
     "name": "Balakrishna Nair Nalivalapil",
@@ -39,7 +40,6 @@
     "navigation": "Main navigation",
     "menu": "Menu",
     "resume": "Résumé",
-    "downloadResume": "Download résumé",
     "viewWork": "Explore my work",
     "email": "Email",
     "caseStudy": "Read case study",
@@ -60,7 +60,8 @@
       "eyebrow": "404 / NOT FOUND",
       "title": "This page took a wrong turn.",
       "description": "The link may have changed. Head back to explore my work or get in touch."
-    }
+    },
+    "resumeDocuments": "Résumé & cover letter"
   },
   "navigation": [
     {
@@ -468,6 +469,6 @@
   "contact": {
     "emailLabel": "Start a conversation",
     "note": "Backend · Software Engineering · Full-stack",
-    "resumeNote": "Prefer the one-page version?"
+    "resumeNote": "My latest application documents"
   }
 }

@@ -1,10 +1,10 @@
 # Rebuild validation
 
-Validated on September 18, 2026 against the production build served locally. These results do not assert that the new version is deployed to GitHub Pages.
+Validated on September 18, 2026 against the production build served locally. The original rebuild was subsequently published and verified on GitHub Pages; the checks below describe the local build unless stated otherwise.
 
 ## Automated checks
 
-- `npm test`: all 10 checks pass. These cover route resolution and historical slugs, pre-rendered profile content, internal links and anchors, résumé download and legacy filename, canonical email, responsive image sources and other assets, metadata and structured data, complete case studies, real static-server HTTP behavior, sitemap/404 handling, and a 5 KB gzip JavaScript budget.
+- `npm test`: all 10 checks pass. These cover route resolution and historical slugs, pre-rendered profile content, internal links and anchors, Google Drive document links and legacy PDF filename, canonical email, responsive image sources and other assets, metadata and structured data, complete case studies, real static-server HTTP behavior, sitemap/404 handling, and a 5 KB gzip JavaScript budget.
 - Production build: completes with no warnings.
 - `npm run format:check`: passes.
 - `npm audit`: zero vulnerabilities.
@@ -40,4 +40,8 @@ Production JavaScript is approximately 0.52 KB gzip. React is not loaded in prod
 - GitHub profile, Huddle source repository, and Huddle live site: HTTP 200.
 - LinkedIn returns HTTP 999 to automated requests. Its owner-supplied URL is preserved, but automated verification is inconclusive.
 - The old ClassNest source URL returns 404 and is omitted from the new site.
-- GitHub Pages publication was not performed. After publishing, repeat direct-route, refresh, résumé, 404, and social-preview checks on the public domain.
+- The rebuild was published to GitHub Pages on September 18, 2026. Homepage, all three case studies, direct Huddle routing, résumé PDF, social image, sitemap, and robots file were verified against the local build; an unknown route returned HTTP 404. Later document-link updates are tracked separately below.
+
+## Google Drive document update
+
+The header, hero, and contact résumé links now open the owner-provided Google Drive folder in a new tab. The main buttons say “Résumé & cover letter”; the compact header retains “Résumé”. Legacy PDF URLs remain available for old links, but are no longer linked from the site. Subsequent résumé and cover-letter updates can be managed directly in Drive without redeploying the website.

@@ -94,8 +94,8 @@ test("all navigation anchors and same-site links resolve to built pages or asset
   }
 });
 
-test("downloaded résumé is the supplied PDF and contact links use the canonical email", async () => {
-  assert.ok(home(`a[download][href="${data.meta.resumePath}"]`).length >= 2);
+test("résumé links open the shared Drive folder while legacy PDFs and canonical contact remain available", async () => {
+  assert.equal(home(`a[href="${data.meta.resumeUrl}"]`).length, 3);
   const pdf = await readFile(join("dist", data.meta.resumePath));
   assert.equal(pdf.subarray(0, 5).toString(), "%PDF-");
   assert.ok(pdf.length > 10000);
@@ -104,6 +104,15 @@ test("downloaded résumé is the supplied PDF and contact links use the canonica
   }
   for (const page of pages) {
     const $ = load(page.html);
+    const links = $(`a[href="${data.meta.resumeUrl}"]`);
+    assert.ok(links.length >= 2);
+    for (const el of links.toArray()) {
+      assert.equal($(el).attr("target"), "_blank");
+      assert.match($(el).attr("rel"), /noopener/);
+      assert.equal($(el).attr("download"), undefined);
+    }
+    assert.equal($(`a[href="${data.meta.resumePath}"]`).length, 0);
+    assert.ok($.text().includes(data.ui.resumeDocuments));
     for (const el of $('a[href^="mailto:"]').toArray())
       assert.equal($(el).attr("href"), `mailto:${data.basics.email}`);
   }
