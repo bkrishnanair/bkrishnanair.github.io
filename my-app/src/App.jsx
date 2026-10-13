@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import data from "./data/resume.json";
 import { resolveRoute, projectPath } from "./routes.js";
 
@@ -72,10 +72,13 @@ const SectionHead = ({ id }) => {
 };
 
 function Header() {
+  useEffect(() => {
+    document.dispatchEvent(new Event("portfolio:ready"));
+  }, []);
   return (
     <header className="site-header">
       <div className="container header-inner">
-        <a className="identity" href="/">
+        <a className="identity" href="/" aria-label={basics.displayName}>
           <span className="monogram" aria-hidden="true">
             {basics.initials}
             <span>.</span>
@@ -90,6 +93,40 @@ function Header() {
           ))}
         </nav>
         <div className="header-actions">
+          <button
+            className="theme-toggle"
+            type="button"
+            role="switch"
+            aria-checked="false"
+            aria-label={ui.themeLabel}
+            title={ui.themeTooltip}
+          >
+            <svg
+              className="theme-sun"
+              viewBox="0 0 24 24"
+              width="19"
+              height="19"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.5"
+              aria-hidden="true"
+            >
+              <circle cx="12" cy="12" r="4" />
+              <path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5" />
+            </svg>
+            <svg
+              className="theme-moon"
+              viewBox="0 0 24 24"
+              width="19"
+              height="19"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.5"
+              aria-hidden="true"
+            >
+              <path d="M20.5 14A8.5 8.5 0 0 1 10 3.5 8.5 8.5 0 1 0 20.5 14Z" />
+            </svg>
+          </button>
           <ResumeLink compact />
           <details className="mobile-menu">
             <summary>

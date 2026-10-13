@@ -61,7 +61,9 @@
       "title": "This page took a wrong turn.",
       "description": "The link may have changed. Head back to explore my work or get in touch."
     },
-    "resumeDocuments": "Résumé & cover letter"
+    "resumeDocuments": "Résumé & cover letter",
+    "themeLabel": "Light theme",
+    "themeTooltip": "Switch between light and dark themes"
   },
   "navigation": [
     {
